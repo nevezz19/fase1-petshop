@@ -3,127 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetShop Amigo Fiel - Higiene e Limpeza</title>
+    <meta name="description" content="Higiene e Limpeza para pets - PetShop Amigo Fiel. Tapetes higiênicos, fraldas e produtos de limpeza.">
+    <title>Higiene e Limpeza - PetShop Amigo Fiel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- ==================== CABEÇALHO ==================== -->
-    <header>
-        <h1>&#128062; PetShop Amigo Fiel</h1>
-        <p>Cuidando do seu melhor amigo com carinho e dedicação!</p>
-        <hr>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="acessorios.html">Acessórios</a> |
-            <a href="racoes.html">Rações</a> |
-            <a href="higiene.html"><strong>Higiene e Limpeza</strong></a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
-        <hr>
-    </header>
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- ==================== BARRA SUPERIOR ==================== -->
+    <div class="top-bar" role="complementary" aria-label="Informações rápidas de contato">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap gap-1">
+            <span>
+                <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                Rua dos Animais, 123 - Centro - São Paulo/SP
+            </span>
+            <span>
+                <i class="bi bi-telephone-fill" aria-hidden="true"></i> (11) 1234-5678
+                &nbsp;|&nbsp;
+                <i class="bi bi-clock-fill" aria-hidden="true"></i> Seg–Sáb: 8h–19h
+                &nbsp;
+                <span id="status-funcionamento" aria-live="polite" aria-atomic="true"></span>
+            </span>
+        </div>
+    </div>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar navbar-expand-lg navbar-custom" role="navigation" aria-label="Menu principal de navegação">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" aria-label="PetShop Amigo Fiel - Ir para a página inicial">
+                &#128062; PetShop <span>Amigo Fiel</span>
+            </a>
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                    aria-controls="navbarMain" aria-expanded="false"
+                    aria-label="Abrir ou fechar o menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false" aria-current="true">
+                            Produtos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="acessorios.html">
+                                    <i class="bi bi-bag-heart me-2" aria-hidden="true"></i>Acessórios
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="racoes.html">
+                                    <i class="bi bi-bag me-2" aria-hidden="true"></i>Rações
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item fw-bold" href="higiene.html" aria-current="page">
+                                    <i class="bi bi-droplet me-2" aria-hidden="true"></i>Higiene e Limpeza
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                </ul>
+                <div id="relogio-widget" class="ms-3 d-none d-lg-block"
+                     aria-live="polite" aria-label="Data e hora atual" role="timer">
+                    Carregando...
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
-    <main>
-        <h2>Produtos de Higiene e Limpeza</h2>
-        <p>
-            Mantenha a higiene do seu pet e do ambiente em dia com nossos produtos de
-            higiene e limpeza. Tapetes higiênicos, fraldas descartáveis e muito mais!
-        </p>
+    <main id="conteudo-principal">
 
-        <br>
+        <!-- Hero da página -->
+        <div class="page-hero" style="background: linear-gradient(135deg, #1a4d6e 0%, #2196a5 100%);" role="banner">
+            <div class="container">
+                <h1><i class="bi bi-droplet me-2" aria-hidden="true"></i>Higiene e Limpeza</h1>
+                <p>Produtos para manter a higiene e o bem-estar do seu pet em dia!</p>
+                <nav aria-label="Breadcrumb de navegação">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item">
+                            <a href="index.html" style="color: rgba(255,255,255,0.7);">Início</a>
+                        </li>
+                        <li class="breadcrumb-item active" style="color: #fff;" aria-current="page">Higiene e Limpeza</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
 
-        <!-- Produto 1 -->
-        <table border="1" cellpadding="10" cellspacing="0">
-            <tr>
-                <th colspan="2">Tapete Higiênico para Cães - 30 unidades</th>
-            </tr>
-            <tr>
-                <td>
-                    <img src="imagens/tapete-higienico.jpg" alt="Tapete Higiênico para Cães" width="250" height="250">
-                </td>
-                <td>
-                    <p><strong>Descrição:</strong></p>
-                    <p>
-                        Tapete higiênico super absorvente para cães. Possui 5 camadas de proteção
-                        que garantem máxima absorção e evitam vazamentos. Ideal para filhotes em
-                        fase de treinamento, cães idosos ou para uso em dias chuvosos. Contém
-                        atrativo canino que facilita o aprendizado do pet.
-                    </p>
-                    <ul>
-                        <li><strong>Quantidade:</strong> 30 unidades por pacote</li>
-                        <li><strong>Dimensões:</strong> 60cm x 60cm (cada unidade)</li>
-                        <li><strong>Absorção:</strong> Até 1 litro por unidade</li>
-                        <li><strong>Indicação:</strong> Cães de todas as idades e portes</li>
-                        <li><strong>Diferencial:</strong> Contém atrativo canino</li>
-                    </ul>
-                    <p><strong>Valor: R$ 39,90</strong></p>
-                </td>
-            </tr>
-        </table>
+        <!-- Listagem de produtos -->
+        <section class="container mb-5" aria-labelledby="titulo-higiene">
+            <h2 class="section-title" id="titulo-higiene">Nossos Produtos</h2>
+            <div class="row g-4">
 
-        <br>
+                <!-- Produto 1: Tapete Higiênico -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="card card-produto" aria-label="Produto: Tapete Higiênico">
+                        <!-- Audiodescrição detalhada para leitores de tela -->
+                        <img src="imagens/tapete-higienico.jpg"
+                             alt="Pacote com 30 unidades de tapetes higiênicos descartáveis para cães, com camadas absorventes e borda de contenção"
+                             class="card-img-top"
+                             width="400" height="200"
+                             loading="lazy"
+                             data-fallback="true">
+                        <div class="img-placeholder" aria-hidden="true">🧻</div>
+                        <div class="card-body">
+                            <span class="badge badge-categoria mb-2">Higiene</span>
+                            <h3 class="card-title h5">Tapete Higiênico</h3>
+                            <p class="card-text text-muted">
+                                Tapetes higiênicos descartáveis com alta absorção e camada protetora
+                                anti-odor. Ideal para cães em fase de adestramento.
+                                Pacote com <strong>30 unidades</strong>.
+                            </p>
+                            <p class="preco" aria-label="Preço: R$ 39,90">R$ 39,90</p>
+                            <a href="contato.html" class="btn btn-primary-custom w-100"
+                               aria-label="Entrar em contato para comprar o Tapete Higiênico">
+                                <i class="bi bi-cart-plus me-1" aria-hidden="true"></i> Tenho Interesse
+                            </a>
+                        </div>
+                    </article>
+                </div>
 
-        <!-- Produto 2 -->
-        <table border="1" cellpadding="10" cellspacing="0">
-            <tr>
-                <th colspan="2">Fralda Descartável para Cães - 12 unidades</th>
-            </tr>
-            <tr>
-                <td>
-                    <img src="imagens/fralda-pet.jpg" alt="Fralda Descartável para Cães" width="250" height="250">
-                </td>
-                <td>
-                    <p><strong>Descrição:</strong></p>
-                    <p>
-                        Fralda descartável ajustável para cães. Perfeita para fêmeas no cio,
-                        cães idosos com incontinência ou pós-operatório. Material macio e
-                        hipoalergênico, com fitas adesivas reposicionáveis para ajuste perfeito.
-                        Alta capacidade de absorção com indicador de umidade.
-                    </p>
-                    <ul>
-                        <li><strong>Quantidade:</strong> 12 unidades por pacote</li>
-                        <li><strong>Tamanhos disponíveis:</strong> P, M, G, GG</li>
-                        <li><strong>Material:</strong> Tecido macio hipoalergênico</li>
-                        <li><strong>Indicação:</strong> Fêmeas no cio, cães idosos, pós-operatório</li>
-                        <li><strong>Diferencial:</strong> Indicador de umidade e fitas reposicionáveis</li>
-                    </ul>
-                    <p><strong>Valor: R$ 29,90</strong></p>
-                </td>
-            </tr>
-        </table>
+                <!-- Produto 2: Fralda Descartável -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="card card-produto" aria-label="Produto: Fralda Descartável para Pets">
+                        <img src="imagens/fralda-pet.jpg"
+                             alt="Pacote com 12 fraldas descartáveis para pets fêmeas, com ajuste de cintura elástico para maior conforto"
+                             class="card-img-top"
+                             width="400" height="200"
+                             loading="lazy"
+                             data-fallback="true">
+                        <div class="img-placeholder" aria-hidden="true">🩲</div>
+                        <div class="card-body">
+                            <span class="badge badge-categoria mb-2">Higiene</span>
+                            <h3 class="card-title h5">Fralda Descartável Pet</h3>
+                            <p class="card-text text-muted">
+                                Fralda descartável para pets fêmeas, com cintura elástica
+                                regulável para máximo conforto. Alta absorção e proteção
+                                contra vazamentos. Pacote com <strong>12 unidades</strong>.
+                            </p>
+                            <p class="preco" aria-label="Preço: R$ 29,90">R$ 29,90</p>
+                            <a href="contato.html" class="btn btn-primary-custom w-100"
+                               aria-label="Entrar em contato para comprar a Fralda Descartável">
+                                <i class="bi bi-cart-plus me-1" aria-hidden="true"></i> Tenho Interesse
+                            </a>
+                        </div>
+                    </article>
+                </div>
 
-        <br>
-        <p><a href="index.html">&larr; Voltar para a Página Inicial</a></p>
+                <!-- Produto 3: Shampoo Pet -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="card card-produto" aria-label="Produto: Shampoo para Pets">
+                        <img src="imagens/shampoo-pet.jpg"
+                             alt="Frasco de 500ml de shampoo neutro para pets, com fórmula hipoalergênica e pH balanceado para cães e gatos"
+                             class="card-img-top"
+                             width="400" height="200"
+                             loading="lazy"
+                             data-fallback="true">
+                        <div class="img-placeholder" aria-hidden="true">🧴</div>
+                        <div class="card-body">
+                            <span class="badge badge-categoria mb-2">Limpeza</span>
+                            <h3 class="card-title h5">Shampoo Pet Neutro</h3>
+                            <p class="card-text text-muted">
+                                Shampoo hipoalergênico com pH balanceado para cães e gatos.
+                                Fórmula suave, sem parabenos. Deixa o pelo macio e brilhante.
+                                Volume: <strong>500ml</strong>.
+                            </p>
+                            <p class="preco" aria-label="Preço: R$ 34,90">R$ 34,90</p>
+                            <a href="contato.html" class="btn btn-primary-custom w-100"
+                               aria-label="Entrar em contato para comprar o Shampoo Pet Neutro">
+                                <i class="bi bi-cart-plus me-1" aria-hidden="true"></i> Tenho Interesse
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="container mb-5 text-center">
+            <p class="text-muted">Explore outras categorias ou agende um serviço:</p>
+            <a href="racoes.html" class="btn btn-secondary-custom me-2"
+               aria-label="Ver produtos da categoria Rações">
+                <i class="bi bi-bag me-1" aria-hidden="true"></i> Rações
+            </a>
+            <a href="agendamento.html" class="btn btn-primary-custom"
+               aria-label="Agendar serviço de banho ou tosa">
+                <i class="bi bi-calendar-check me-1" aria-hidden="true"></i> Agendar Serviço
+            </a>
+        </div>
+
     </main>
 
-    <br>
-    <hr>
-
     <!-- ==================== RODAPÉ ==================== -->
-    <footer>
-        <h3>PetShop Amigo Fiel</h3>
-        <p>
-            <strong>Endereço:</strong> Rua dos Animais, 123 - Centro - São Paulo/SP - CEP: 01001-000<br>
-            <strong>Telefone:</strong> (11) 1234-5678 | <strong>WhatsApp:</strong> (11) 91234-5678<br>
-            <strong>E-mail:</strong> contato@petshopamigofiel.com.br<br>
-            <strong>Horário de funcionamento:</strong> Segunda a Sábado, das 8h às 19h
-        </p>
-        <hr>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="acessorios.html">Acessórios</a> |
-            <a href="racoes.html">Rações</a> |
-            <a href="higiene.html">Higiene e Limpeza</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
-        <hr>
-        <p>
-            &copy; 2026 PetShop Amigo Fiel - Todos os direitos reservados.<br>
-            Desenvolvido por Filipe Neves - Projeto Acadêmico - Fundamentos de Sistemas Web
-        </p>
+    <footer role="contentinfo">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>&#128062; PetShop Amigo Fiel</h5>
+                    <p class="small" style="color: rgba(255,255,255,0.7);">
+                        Cuidando do seu melhor amigo com carinho e dedicação desde 2014.
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6>Navegação</h6>
+                    <nav aria-label="Links de navegação no rodapé">
+                        <ul class="list-unstyled small">
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="acessorios.html">Acessórios</a></li>
+                            <li><a href="racoes.html">Rações</a></li>
+                            <li><a href="higiene.html">Higiene e Limpeza</a></li>
+                            <li><a href="servicos.html">Serviços</a></li>
+                            <li><a href="cadastro.html">Cadastro</a></li>
+                            <li><a href="agendamento.html">Agendamento</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6>Contato</h6>
+                    <address class="small" style="font-style: normal;">
+                        <p><i class="bi bi-geo-alt-fill me-1" aria-hidden="true"></i> Rua dos Animais, 123 - São Paulo/SP</p>
+                        <p><i class="bi bi-telephone-fill me-1" aria-hidden="true"></i> (11) 1234-5678</p>
+                        <p><i class="bi bi-whatsapp me-1" aria-hidden="true"></i> (11) 91234-5678</p>
+                        <p><i class="bi bi-clock-fill me-1" aria-hidden="true"></i> Seg–Sáb: 8h às 19h</p>
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center py-3">
+            <small>
+                &copy; 2026 PetShop Amigo Fiel - Todos os direitos reservados. |
+                Desenvolvido por Filipe Neves &mdash; Projeto Acadêmico &mdash; Fundamentos de Sistemas Web
+            </small>
+        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

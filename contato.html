@@ -3,146 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetShop Amigo Fiel - Contato</title>
+    <meta name="description" content="Contato - PetShop Amigo Fiel. Entre em contato conosco por telefone, WhatsApp ou formulário online.">
+    <title>Contato - PetShop Amigo Fiel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- ==================== CABEÇALHO ==================== -->
-    <header>
-        <h1>&#128062; PetShop Amigo Fiel</h1>
-        <p>Cuidando do seu melhor amigo com carinho e dedicação!</p>
-        <hr>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="acessorios.html">Acessórios</a> |
-            <a href="racoes.html">Rações</a> |
-            <a href="higiene.html">Higiene e Limpeza</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html"><strong>Contato</strong></a>
-        </nav>
-        <hr>
-    </header>
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- ==================== BARRA SUPERIOR ==================== -->
+    <div class="top-bar" role="complementary" aria-label="Informações rápidas de contato">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap gap-1">
+            <span>
+                <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                Rua dos Animais, 123 - Centro - São Paulo/SP
+            </span>
+            <span>
+                <i class="bi bi-telephone-fill" aria-hidden="true"></i> (11) 1234-5678
+                &nbsp;|&nbsp;
+                <i class="bi bi-clock-fill" aria-hidden="true"></i> Seg–Sáb: 8h–19h
+                &nbsp;
+                <span id="status-funcionamento" aria-live="polite" aria-atomic="true"></span>
+            </span>
+        </div>
+    </div>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar navbar-expand-lg navbar-custom" role="navigation" aria-label="Menu principal de navegação">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" aria-label="PetShop Amigo Fiel - Ir para a página inicial">
+                &#128062; PetShop <span>Amigo Fiel</span>
+            </a>
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                    aria-controls="navbarMain" aria-expanded="false"
+                    aria-label="Abrir ou fechar o menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Produtos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="acessorios.html">
+                                    <i class="bi bi-bag-heart me-2" aria-hidden="true"></i>Acessórios
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="racoes.html">
+                                    <i class="bi bi-bag me-2" aria-hidden="true"></i>Rações
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="higiene.html">
+                                    <i class="bi bi-droplet me-2" aria-hidden="true"></i>Higiene e Limpeza
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contato.html" aria-current="page">Contato</a>
+                    </li>
+                </ul>
+                <div id="relogio-widget" class="ms-3 d-none d-lg-block"
+                     aria-live="polite" aria-label="Data e hora atual" role="timer">
+                    Carregando...
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
-    <main>
-        <h2>Entre em Contato</h2>
-        <p>
-            Ficou com alguma dúvida ou deseja agendar um serviço? Entre em contato conosco
-            por um dos canais abaixo. Teremos prazer em atendê-lo!
-        </p>
+    <main id="conteudo-principal">
 
-        <br>
+        <!-- Hero da página -->
+        <div class="page-hero" role="banner">
+            <div class="container">
+                <h1><i class="bi bi-envelope me-2" aria-hidden="true"></i>Fale Conosco</h1>
+                <p>Tire suas dúvidas, solicite informações ou envie uma mensagem!</p>
+                <nav aria-label="Breadcrumb de navegação">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item">
+                            <a href="index.html" style="color: rgba(255,255,255,0.7);">Início</a>
+                        </li>
+                        <li class="breadcrumb-item active" style="color: #fff;" aria-current="page">Contato</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
 
-        <h3>Nossos Canais de Atendimento</h3>
-        <table border="1" cellpadding="10" cellspacing="0">
-            <tr>
-                <th>Canal</th>
-                <th>Informação</th>
-            </tr>
-            <tr>
-                <td><strong>Endereço</strong></td>
-                <td>Rua dos Animais, 123 - Centro - São Paulo/SP - CEP: 01001-000</td>
-            </tr>
-            <tr>
-                <td><strong>Telefone</strong></td>
-                <td>(11) 1234-5678</td>
-            </tr>
-            <tr>
-                <td><strong>WhatsApp</strong></td>
-                <td>(11) 91234-5678</td>
-            </tr>
-            <tr>
-                <td><strong>E-mail</strong></td>
-                <td>contato@petshopamigofiel.com.br</td>
-            </tr>
-            <tr>
-                <td><strong>Horário de Funcionamento</strong></td>
-                <td>Segunda a Sábado, das 8h às 19h</td>
-            </tr>
-        </table>
+        <div class="container mb-5">
+            <div class="row g-4">
 
-        <br>
+                <!-- ==================== INFORMAÇÕES DE CONTATO ==================== -->
+                <div class="col-md-5">
+                    <section aria-labelledby="titulo-info-contato">
+                        <h2 class="section-title" id="titulo-info-contato">Nossas Informações</h2>
 
-        <h3>Envie sua Mensagem</h3>
-        <p>Preencha o formulário abaixo para enviar uma mensagem diretamente para a nossa equipe:</p>
+                        <!-- Cards de contato -->
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex align-items-start gap-3 p-3 bg-white rounded shadow-sm">
+                                <i class="bi bi-geo-alt-fill fs-4" style="color: var(--cor-primaria);" aria-hidden="true"></i>
+                                <div>
+                                    <h3 class="h6 fw-bold mb-1">Endereço</h3>
+                                    <address style="font-style: normal; margin: 0;">
+                                        Rua dos Animais, 123 - Centro<br>
+                                        São Paulo/SP - CEP: 01001-000
+                                    </address>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start gap-3 p-3 bg-white rounded shadow-sm">
+                                <i class="bi bi-telephone-fill fs-4" style="color: var(--cor-primaria);" aria-hidden="true"></i>
+                                <div>
+                                    <h3 class="h6 fw-bold mb-1">Telefone</h3>
+                                    <p class="mb-0">
+                                        <a href="tel:+551112345678" aria-label="Ligar para (11) 1234-5678">(11) 1234-5678</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start gap-3 p-3 bg-white rounded shadow-sm">
+                                <i class="bi bi-whatsapp fs-4" style="color: #25d366;" aria-hidden="true"></i>
+                                <div>
+                                    <h3 class="h6 fw-bold mb-1">WhatsApp</h3>
+                                    <p class="mb-0">
+                                        <a href="https://wa.me/5511912345678"
+                                           target="_blank"
+                                           rel="noopener noreferrer"
+                                           aria-label="Enviar mensagem pelo WhatsApp para (11) 91234-5678 (abre em nova janela)">
+                                            (11) 91234-5678
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start gap-3 p-3 bg-white rounded shadow-sm">
+                                <i class="bi bi-envelope-fill fs-4" style="color: var(--cor-primaria);" aria-hidden="true"></i>
+                                <div>
+                                    <h3 class="h6 fw-bold mb-1">E-mail</h3>
+                                    <p class="mb-0">
+                                        <a href="mailto:contato@petshopamigofiel.com.br"
+                                           aria-label="Enviar e-mail para contato@petshopamigofiel.com.br">
+                                            contato@petshopamigofiel.com.br
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start gap-3 p-3 bg-white rounded shadow-sm">
+                                <i class="bi bi-clock-fill fs-4" style="color: var(--cor-primaria);" aria-hidden="true"></i>
+                                <div>
+                                    <h3 class="h6 fw-bold mb-1">Horário de Funcionamento</h3>
+                                    <p class="mb-0">Segunda a Sábado: 8h às 19h</p>
+                                    <p class="mb-0 text-muted small">Domingos e feriados: fechado</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
 
-        <form action="#" method="post">
-            <p>
-                <label for="nome"><strong>Nome completo:</strong></label><br>
-                <input type="text" id="nome" name="nome" size="50" placeholder="Digite seu nome completo" required>
-            </p>
-            <p>
-                <label for="email"><strong>E-mail:</strong></label><br>
-                <input type="email" id="email" name="email" size="50" placeholder="Digite seu e-mail" required>
-            </p>
-            <p>
-                <label for="telefone"><strong>Telefone:</strong></label><br>
-                <input type="tel" id="telefone" name="telefone" size="50" placeholder="(00) 00000-0000">
-            </p>
-            <p>
-                <label for="assunto"><strong>Assunto:</strong></label><br>
-                <select id="assunto" name="assunto">
-                    <option value="">-- Selecione um assunto --</option>
-                    <option value="duvida">Dúvida sobre produtos</option>
-                    <option value="agendamento">Agendamento de serviço</option>
-                    <option value="telebusca">Informações sobre tele-busca</option>
-                    <option value="reclamacao">Reclamação</option>
-                    <option value="elogio">Elogio</option>
-                    <option value="outro">Outro</option>
-                </select>
-            </p>
-            <p>
-                <label for="mensagem"><strong>Mensagem:</strong></label><br>
-                <textarea id="mensagem" name="mensagem" rows="6" cols="52" placeholder="Digite sua mensagem aqui..." required></textarea>
-            </p>
-            <p>
-                <input type="submit" value="Enviar Mensagem">
-                <input type="reset" value="Limpar Formulário">
-            </p>
-        </form>
+                <!-- ==================== FORMULÁRIO DE CONTATO ==================== -->
+                <div class="col-md-7">
+                    <section aria-labelledby="titulo-form-contato">
+                        <h2 class="section-title" id="titulo-form-contato">Envie uma Mensagem</h2>
 
-        <br>
+                        <div class="form-card">
+                            <form id="formContato"
+                                  novalidate
+                                  onsubmit="validarContato(event)"
+                                  aria-label="Formulário de contato">
 
-        <h3>Localização</h3>
-        <p>
-            Estamos localizados no centro de São Paulo, com fácil acesso por transporte
-            público e estacionamento gratuito para clientes.
-        </p>
-        <p>
-            <strong>Referência:</strong> Próximo à Praça dos Bichos, em frente ao Parque Municipal.
-        </p>
+                                <!-- Nome -->
+                                <div class="mb-3">
+                                    <label for="nome" class="form-label">
+                                        Nome Completo <span class="text-danger" aria-label="campo obrigatório">*</span>
+                                    </label>
+                                    <input type="text"
+                                           class="form-control"
+                                           id="nome"
+                                           name="nome"
+                                           placeholder="Seu nome completo"
+                                           required
+                                           aria-required="true"
+                                           autocomplete="name">
+                                    <div class="invalid-feedback" role="alert">
+                                        Por favor, informe seu nome.
+                                    </div>
+                                </div>
 
-        <br>
-        <p><a href="index.html">&larr; Voltar para a Página Inicial</a></p>
+                                <!-- E-mail -->
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">
+                                        E-mail <span class="text-danger" aria-label="campo obrigatório">*</span>
+                                    </label>
+                                    <input type="email"
+                                           class="form-control"
+                                           id="email"
+                                           name="email"
+                                           placeholder="seu@email.com.br"
+                                           required
+                                           aria-required="true"
+                                           autocomplete="email">
+                                    <div class="invalid-feedback" role="alert">
+                                        Por favor, informe um e-mail válido.
+                                    </div>
+                                </div>
+
+                                <!-- Telefone -->
+                                <div class="mb-3">
+                                    <label for="telefone" class="form-label">Telefone</label>
+                                    <input type="tel"
+                                           class="form-control"
+                                           id="telefone"
+                                           name="telefone"
+                                           placeholder="(11) 91234-5678"
+                                           data-mask="tel"
+                                           autocomplete="tel"
+                                           aria-describedby="telefone-help">
+                                    <div id="telefone-help" class="form-text">
+                                        Formato: (00) 90000-0000
+                                    </div>
+                                </div>
+
+                                <!-- Assunto -->
+                                <div class="mb-3">
+                                    <label for="assunto" class="form-label">
+                                        Assunto <span class="text-danger" aria-label="campo obrigatório">*</span>
+                                    </label>
+                                    <select class="form-select"
+                                            id="assunto"
+                                            name="assunto"
+                                            required
+                                            aria-required="true">
+                                        <option value="" disabled selected>Selecione um assunto...</option>
+                                        <option value="duvida">Dúvida sobre produtos</option>
+                                        <option value="servico">Informações sobre serviços</option>
+                                        <option value="agendamento">Agendamento</option>
+                                        <option value="reclamacao">Reclamação</option>
+                                        <option value="sugestao">Sugestão</option>
+                                        <option value="outro">Outro assunto</option>
+                                    </select>
+                                    <div class="invalid-feedback" role="alert">
+                                        Por favor, selecione um assunto.
+                                    </div>
+                                </div>
+
+                                <!-- Mensagem -->
+                                <div class="mb-4">
+                                    <label for="mensagem" class="form-label">
+                                        Mensagem <span class="text-danger" aria-label="campo obrigatório">*</span>
+                                    </label>
+                                    <textarea class="form-control"
+                                              id="mensagem"
+                                              name="mensagem"
+                                              rows="5"
+                                              placeholder="Escreva sua mensagem aqui..."
+                                              required
+                                              aria-required="true"
+                                              aria-describedby="mensagem-help"></textarea>
+                                    <div id="mensagem-help" class="form-text">
+                                        Descreva sua dúvida ou solicitação com o máximo de detalhes.
+                                    </div>
+                                    <div class="invalid-feedback" role="alert">
+                                        Por favor, escreva sua mensagem.
+                                    </div>
+                                </div>
+
+                                <!-- Botões -->
+                                <div class="d-flex gap-2">
+                                    <button type="submit" class="btn btn-primary-custom flex-grow-1"
+                                            aria-label="Enviar mensagem de contato">
+                                        <i class="bi bi-send me-1" aria-hidden="true"></i>
+                                        Enviar Mensagem
+                                    </button>
+                                    <button type="reset" class="btn btn-outline-secondary"
+                                            aria-label="Limpar todos os campos do formulário">
+                                        <i class="bi bi-arrow-counterclockwise me-1" aria-hidden="true"></i>
+                                        Limpar
+                                    </button>
+                                </div>
+
+                                <p class="text-muted small mt-3 mb-0">
+                                    <span aria-hidden="true">*</span>
+                                    Campos obrigatórios. Respondemos em até 24 horas.
+                                </p>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+
     </main>
 
-    <br>
-    <hr>
-
     <!-- ==================== RODAPÉ ==================== -->
-    <footer>
-        <h3>PetShop Amigo Fiel</h3>
-        <p>
-            <strong>Endereço:</strong> Rua dos Animais, 123 - Centro - São Paulo/SP - CEP: 01001-000<br>
-            <strong>Telefone:</strong> (11) 1234-5678 | <strong>WhatsApp:</strong> (11) 91234-5678<br>
-            <strong>E-mail:</strong> contato@petshopamigofiel.com.br<br>
-            <strong>Horário de funcionamento:</strong> Segunda a Sábado, das 8h às 19h
-        </p>
-        <hr>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="acessorios.html">Acessórios</a> |
-            <a href="racoes.html">Rações</a> |
-            <a href="higiene.html">Higiene e Limpeza</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
-        <hr>
-        <p>
-            &copy; 2026 PetShop Amigo Fiel - Todos os direitos reservados.<br>
-            Desenvolvido por Filipe Neves - Projeto Acadêmico - Fundamentos de Sistemas Web
-        </p>
+    <footer role="contentinfo">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>&#128062; PetShop Amigo Fiel</h5>
+                    <p class="small" style="color: rgba(255,255,255,0.7);">
+                        Cuidando do seu melhor amigo com carinho e dedicação desde 2014.
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6>Navegação</h6>
+                    <nav aria-label="Links de navegação no rodapé">
+                        <ul class="list-unstyled small">
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="acessorios.html">Acessórios</a></li>
+                            <li><a href="racoes.html">Rações</a></li>
+                            <li><a href="higiene.html">Higiene e Limpeza</a></li>
+                            <li><a href="servicos.html">Serviços</a></li>
+                            <li><a href="cadastro.html">Cadastro</a></li>
+                            <li><a href="agendamento.html">Agendamento</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6>Contato</h6>
+                    <address class="small" style="font-style: normal;">
+                        <p><i class="bi bi-geo-alt-fill me-1" aria-hidden="true"></i> Rua dos Animais, 123 - São Paulo/SP</p>
+                        <p><i class="bi bi-telephone-fill me-1" aria-hidden="true"></i> (11) 1234-5678</p>
+                        <p><i class="bi bi-whatsapp me-1" aria-hidden="true"></i> (11) 91234-5678</p>
+                        <p><i class="bi bi-clock-fill me-1" aria-hidden="true"></i> Seg–Sáb: 8h às 19h</p>
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center py-3">
+            <small>
+                &copy; 2026 PetShop Amigo Fiel - Todos os direitos reservados. |
+                Desenvolvido por Filipe Neves &mdash; Projeto Acadêmico &mdash; Fundamentos de Sistemas Web
+            </small>
+        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -3,144 +3,353 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetShop Amigo Fiel - Serviços</title>
+    <meta name="description" content="Serviços de banho e tosa - PetShop Amigo Fiel. Tabela de preços com e sem tele-busca.">
+    <title>Serviços - PetShop Amigo Fiel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- ==================== CABEÇALHO ==================== -->
-    <header>
-        <h1>&#128062; PetShop Amigo Fiel</h1>
-        <p>Cuidando do seu melhor amigo com carinho e dedicação!</p>
-        <hr>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="acessorios.html">Acessórios</a> |
-            <a href="racoes.html">Rações</a> |
-            <a href="higiene.html">Higiene e Limpeza</a> |
-            <a href="servicos.html"><strong>Serviços</strong></a> |
-            <a href="contato.html">Contato</a>
-        </nav>
-        <hr>
-    </header>
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- ==================== BARRA SUPERIOR ==================== -->
+    <div class="top-bar" role="complementary" aria-label="Informações rápidas de contato">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap gap-1">
+            <span>
+                <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                Rua dos Animais, 123 - Centro - São Paulo/SP
+            </span>
+            <span>
+                <i class="bi bi-telephone-fill" aria-hidden="true"></i> (11) 1234-5678
+                &nbsp;|&nbsp;
+                <i class="bi bi-clock-fill" aria-hidden="true"></i> Seg–Sáb: 8h–19h
+                &nbsp;
+                <span id="status-funcionamento" aria-live="polite" aria-atomic="true"></span>
+            </span>
+        </div>
+    </div>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar navbar-expand-lg navbar-custom" role="navigation" aria-label="Menu principal de navegação">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" aria-label="PetShop Amigo Fiel - Ir para a página inicial">
+                &#128062; PetShop <span>Amigo Fiel</span>
+            </a>
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                    aria-controls="navbarMain" aria-expanded="false"
+                    aria-label="Abrir ou fechar o menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Produtos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="acessorios.html">
+                                    <i class="bi bi-bag-heart me-2" aria-hidden="true"></i>Acessórios
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="racoes.html">
+                                    <i class="bi bi-bag me-2" aria-hidden="true"></i>Rações
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="higiene.html">
+                                    <i class="bi bi-droplet me-2" aria-hidden="true"></i>Higiene e Limpeza
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="servicos.html" aria-current="page">Serviços</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                </ul>
+                <div id="relogio-widget" class="ms-3 d-none d-lg-block"
+                     aria-live="polite" aria-label="Data e hora atual" role="timer">
+                    Carregando...
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
-    <main>
-        <h2>Nossos Serviços</h2>
-        <p>
-            O PetShop Amigo Fiel oferece serviços profissionais de <strong>banho</strong> e
-            <strong>tosa</strong> para cães e gatos. Contamos com profissionais experientes e
-            produtos de alta qualidade para garantir o bem-estar do seu pet.
-        </p>
-        <p>
-            <strong>Tele-busca:</strong> Oferecemos o serviço de tele-busca! Nós buscamos o seu pet
-            em casa e o entregamos após o serviço, tudo com segurança e pontualidade.
-        </p>
+    <main id="conteudo-principal">
 
-        <br>
+        <!-- Hero da página -->
+        <div class="page-hero" role="banner">
+            <div class="container">
+                <h1><i class="bi bi-scissors me-2" aria-hidden="true"></i>Serviços</h1>
+                <p>Banho e tosa profissional com opção de tele-busca — agendamento com data e horário!</p>
+                <nav aria-label="Breadcrumb de navegação">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item">
+                            <a href="index.html" style="color: rgba(255,255,255,0.7);">Início</a>
+                        </li>
+                        <li class="breadcrumb-item active" style="color: #fff;" aria-current="page">Serviços</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
 
-        <h3>Tabela de Serviços e Valores</h3>
+        <div class="container mb-5">
 
-        <table border="1" cellpadding="10" cellspacing="0">
-            <tr>
-                <th>Serviço</th>
-                <th>Descrição</th>
-                <th>Valor<br>(sem tele-busca)</th>
-                <th>Valor<br>(com tele-busca)</th>
-            </tr>
-            <tr>
-                <td>
-                    <img src="imagens/servico-banho.jpg" alt="Serviço de Banho" width="150" height="100">
-                    <br>
-                    <strong>Banho</strong>
-                </td>
-                <td>
-                    Banho completo com shampoo e condicionador específicos para o tipo de pelagem
-                    do seu pet. Inclui secagem, escovação, limpeza das orelhas e corte de unhas.
-                    Utilizamos apenas produtos hipoalergênicos e de alta qualidade.
-                </td>
-                <td><strong>R$ 50,00</strong></td>
-                <td><strong>R$ 70,00</strong></td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="imagens/servico-tosa.jpg" alt="Serviço de Tosa" width="150" height="100">
-                    <br>
-                    <strong>Tosa</strong>
-                </td>
-                <td>
-                    Tosa profissional higiênica ou na máquina, de acordo com a necessidade e
-                    preferência do tutor. Realizada por profissionais qualificados com
-                    equipamentos esterilizados. Disponível para diversas raças e portes.
-                </td>
-                <td><strong>R$ 60,00</strong></td>
-                <td><strong>R$ 80,00</strong></td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="imagens/servico-banho-tosa.jpg" alt="Serviço de Banho e Tosa" width="150" height="100">
-                    <br>
-                    <strong>Banho + Tosa</strong>
-                </td>
-                <td>
-                    Pacote completo com banho e tosa. Inclui todos os benefícios do banho
-                    (shampoo, condicionador, secagem, escovação, limpeza de orelhas e corte de
-                    unhas) combinados com a tosa profissional. A melhor opção para o cuidado
-                    completo do seu pet com desconto especial!
-                </td>
-                <td><strong>R$ 90,00</strong></td>
-                <td><strong>R$ 120,00</strong></td>
-            </tr>
-        </table>
+            <!-- ==================== TABELA DE PREÇOS ==================== -->
+            <section aria-labelledby="titulo-precos">
+                <h2 class="section-title" id="titulo-precos">Tabela de Preços</h2>
+                <p class="text-muted mb-4">
+                    Os preços variam conforme o porte do animal. Consulte-nos para raças específicas
+                    ou animais de porte extra-grande.
+                </p>
 
-        <br>
+                <!-- Tabela responsiva com preços dos serviços -->
+                <div class="table-responsive mb-4">
+                    <table class="table tabela-servicos" aria-label="Tabela de preços dos serviços de banho e tosa">
+                        <thead>
+                            <tr>
+                                <th scope="col">Serviço</th>
+                                <th scope="col" class="text-center">
+                                    <i class="bi bi-person-walking me-1" aria-hidden="true"></i>
+                                    Entrega no Local<br>
+                                    <small class="fw-normal">(cliente traz o pet)</small>
+                                </th>
+                                <th scope="col" class="text-center">
+                                    <i class="bi bi-truck me-1" aria-hidden="true"></i>
+                                    Com Tele-Busca<br>
+                                    <small class="fw-normal">(buscamos e entregamos)</small>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        <i class="bi bi-droplet-half me-2" style="color: var(--cor-acento);" aria-hidden="true"></i>
+                                        Banho
+                                    </strong>
+                                    <br>
+                                    <small class="text-muted">Banho completo com secagem</small>
+                                </td>
+                                <td class="text-center fw-bold" style="color: var(--cor-primaria);">
+                                    R$ 50,00
+                                </td>
+                                <td class="text-center fw-bold" style="color: var(--cor-secundaria);">
+                                    R$ 70,00
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        <i class="bi bi-scissors me-2" style="color: var(--cor-acento);" aria-hidden="true"></i>
+                                        Tosa
+                                    </strong>
+                                    <br>
+                                    <small class="text-muted">Tosa higiênica ou completa</small>
+                                </td>
+                                <td class="text-center fw-bold" style="color: var(--cor-primaria);">
+                                    R$ 60,00
+                                </td>
+                                <td class="text-center fw-bold" style="color: var(--cor-secundaria);">
+                                    R$ 80,00
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        <i class="bi bi-stars me-2" style="color: var(--cor-secundaria);" aria-hidden="true"></i>
+                                        Banho + Tosa
+                                    </strong>
+                                    <br>
+                                    <small class="text-muted">Combo completo com desconto</small>
+                                </td>
+                                <td class="text-center fw-bold" style="color: var(--cor-primaria);">
+                                    R$ 90,00
+                                </td>
+                                <td class="text-center fw-bold" style="color: var(--cor-secundaria);">
+                                    R$ 120,00
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-        <h3>Informações Importantes sobre os Serviços</h3>
-        <ul>
-            <li>Os valores podem variar de acordo com o porte e a raça do animal.</li>
-            <li>O serviço de <strong>tele-busca</strong> está disponível para a região metropolitana de São Paulo.</li>
-            <li>Para agendar um serviço com tele-busca, entre em contato com pelo menos <strong>24 horas de antecedência</strong>.</li>
-            <li>Aceitamos pagamento em dinheiro, cartão de débito, cartão de crédito e PIX.</li>
-            <li>O pet deve estar com a vacinação em dia para utilizar nossos serviços.</li>
-        </ul>
+                <div class="alert alert-info d-flex gap-2" role="note" aria-label="Nota sobre variação de preços">
+                    <i class="bi bi-info-circle-fill flex-shrink-0 mt-1" aria-hidden="true"></i>
+                    <div>
+                        <strong>Observação:</strong> Preços válidos para cães de pequeno porte (até 10kg).
+                        Para animais maiores ou raças específicas, consulte nossa equipe.
+                    </div>
+                </div>
+            </section>
 
-        <h3>Como Agendar</h3>
-        <p>
-            Para agendar um serviço, entre em contato conosco por telefone, WhatsApp ou
-            visite nossa loja. Para mais informações, acesse nossa
-            <a href="contato.html">página de contato</a>.
-        </p>
+            <!-- ==================== SERVIÇO DE TELE-BUSCA ==================== -->
+            <section class="mt-5" aria-labelledby="titulo-telebusca">
+                <h2 class="section-title" id="titulo-telebusca">
+                    <i class="bi bi-truck me-2" aria-hidden="true"></i>Serviço de Tele-Busca
+                </h2>
+                <div class="row align-items-center">
+                    <div class="col-md-7">
+                        <p class="text-muted">
+                            Com o nosso serviço de <strong>tele-busca</strong>, buscamos o seu pet no
+                            conforto da sua casa e o entregamos após o serviço, cuidado e feliz!
+                            Sem filas, sem estresse — tudo isso com agendamento prévio.
+                        </p>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item d-flex align-items-center gap-2 px-0">
+                                <i class="bi bi-check-circle-fill" style="color: var(--cor-acento);" aria-hidden="true"></i>
+                                Agendamento com pelo menos 24h de antecedência
+                            </li>
+                            <li class="list-group-item d-flex align-items-center gap-2 px-0">
+                                <i class="bi bi-check-circle-fill" style="color: var(--cor-acento);" aria-hidden="true"></i>
+                                Raio de atendimento: até 10km do petshop
+                            </li>
+                            <li class="list-group-item d-flex align-items-center gap-2 px-0">
+                                <i class="bi bi-check-circle-fill" style="color: var(--cor-acento);" aria-hidden="true"></i>
+                                Formas de pagamento: dinheiro, cartão ou PIX
+                            </li>
+                            <li class="list-group-item d-flex align-items-center gap-2 px-0">
+                                <i class="bi bi-check-circle-fill" style="color: var(--cor-acento);" aria-hidden="true"></i>
+                                Pet deve estar com vacinas em dia (obrigatório)
+                            </li>
+                            <li class="list-group-item d-flex align-items-center gap-2 px-0">
+                                <i class="bi bi-check-circle-fill" style="color: var(--cor-acento);" aria-hidden="true"></i>
+                                Transporte em gaiola apropriada com segurança
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <!-- Imagem ilustrativa do serviço de tele-busca -->
+                        <img src="imagens/servico-telebusca.jpg"
+                             alt="Veículo do petshop preparado para transporte seguro de animais com caixas e gaiolas adequadas"
+                             class="img-fluid rounded"
+                             width="400" height="280"
+                             loading="lazy"
+                             onerror="this.style.display='none'">
+                        <div class="d-flex flex-column align-items-center justify-content-center bg-light rounded p-4"
+                             style="display: none !important;">
+                            <span style="font-size: 5rem;" aria-hidden="true">🚗</span>
+                            <p class="text-muted mt-2 mb-0">Tele-busca disponível</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <br>
-        <p><a href="index.html">&larr; Voltar para a Página Inicial</a></p>
+            <!-- ==================== COMO FUNCIONA O AGENDAMENTO ==================== -->
+            <section class="mt-5" aria-labelledby="titulo-como-agendar">
+                <h2 class="section-title" id="titulo-como-agendar">Como Agendar</h2>
+                <div class="row g-4 text-center">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="p-3">
+                            <div class="feature-icon mb-3"
+                                 style="background: linear-gradient(135deg, #2d6a4f, #52b788);"
+                                 aria-hidden="true">1️⃣</div>
+                            <h3 class="h6 fw-bold">Cadastre-se</h3>
+                            <p class="text-muted small">Faça o cadastro do cliente e do seu pet</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="p-3">
+                            <div class="feature-icon mb-3"
+                                 style="background: linear-gradient(135deg, #b5451b, #f77f00);"
+                                 aria-hidden="true">2️⃣</div>
+                            <h3 class="h6 fw-bold">Escolha o Serviço</h3>
+                            <p class="text-muted small">Banho, tosa ou ambos</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="p-3">
+                            <div class="feature-icon mb-3"
+                                 style="background: linear-gradient(135deg, #1a4d6e, #2196a5);"
+                                 aria-hidden="true">3️⃣</div>
+                            <h3 class="h6 fw-bold">Selecione Data e Hora</h3>
+                            <p class="text-muted small">Escolha o dia e horário mais conveniente</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="p-3">
+                            <div class="feature-icon mb-3"
+                                 style="background: linear-gradient(135deg, #5a189a, #9d4edd);"
+                                 aria-hidden="true">4️⃣</div>
+                            <h3 class="h6 fw-bold">Confirmação</h3>
+                            <p class="text-muted small">Receba a confirmação por e-mail</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA de Agendamento -->
+            <div class="text-center mt-4 py-4 bg-light rounded">
+                <h3 class="h5 mb-2">Pronto para agendar o serviço do seu pet?</h3>
+                <p class="text-muted mb-3">Cadastre-se primeiro e depois faça o agendamento.</p>
+                <a href="cadastro.html" class="btn btn-primary-custom me-2"
+                   aria-label="Ir para o formulário de cadastro">
+                    <i class="bi bi-person-plus me-1" aria-hidden="true"></i> Cadastrar
+                </a>
+                <a href="agendamento.html" class="btn btn-secondary-custom"
+                   aria-label="Ir para o formulário de agendamento">
+                    <i class="bi bi-calendar-plus me-1" aria-hidden="true"></i> Agendar Agora
+                </a>
+            </div>
+
+        </div>
+
     </main>
 
-    <br>
-    <hr>
-
     <!-- ==================== RODAPÉ ==================== -->
-    <footer>
-        <h3>PetShop Amigo Fiel</h3>
-        <p>
-            <strong>Endereço:</strong> Rua dos Animais, 123 - Centro - São Paulo/SP - CEP: 01001-000<br>
-            <strong>Telefone:</strong> (11) 1234-5678 | <strong>WhatsApp:</strong> (11) 91234-5678<br>
-            <strong>E-mail:</strong> contato@petshopamigofiel.com.br<br>
-            <strong>Horário de funcionamento:</strong> Segunda a Sábado, das 8h às 19h
-        </p>
-        <hr>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="acessorios.html">Acessórios</a> |
-            <a href="racoes.html">Rações</a> |
-            <a href="higiene.html">Higiene e Limpeza</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
-        <hr>
-        <p>
-            &copy; 2026 PetShop Amigo Fiel - Todos os direitos reservados.<br>
-            Desenvolvido por Filipe Neves - Projeto Acadêmico - Fundamentos de Sistemas Web
-        </p>
+    <footer role="contentinfo">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>&#128062; PetShop Amigo Fiel</h5>
+                    <p class="small" style="color: rgba(255,255,255,0.7);">
+                        Cuidando do seu melhor amigo com carinho e dedicação desde 2014.
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6>Navegação</h6>
+                    <nav aria-label="Links de navegação no rodapé">
+                        <ul class="list-unstyled small">
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="acessorios.html">Acessórios</a></li>
+                            <li><a href="racoes.html">Rações</a></li>
+                            <li><a href="higiene.html">Higiene e Limpeza</a></li>
+                            <li><a href="servicos.html">Serviços</a></li>
+                            <li><a href="cadastro.html">Cadastro</a></li>
+                            <li><a href="agendamento.html">Agendamento</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6>Contato</h6>
+                    <address class="small" style="font-style: normal;">
+                        <p><i class="bi bi-geo-alt-fill me-1" aria-hidden="true"></i> Rua dos Animais, 123 - São Paulo/SP</p>
+                        <p><i class="bi bi-telephone-fill me-1" aria-hidden="true"></i> (11) 1234-5678</p>
+                        <p><i class="bi bi-whatsapp me-1" aria-hidden="true"></i> (11) 91234-5678</p>
+                        <p><i class="bi bi-clock-fill me-1" aria-hidden="true"></i> Seg–Sáb: 8h às 19h</p>
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center py-3">
+            <small>
+                &copy; 2026 PetShop Amigo Fiel - Todos os direitos reservados. |
+                Desenvolvido por Filipe Neves &mdash; Projeto Acadêmico &mdash; Fundamentos de Sistemas Web
+            </small>
+        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

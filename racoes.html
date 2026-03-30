@@ -3,127 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetShop Amigo Fiel - Rações</title>
+    <meta name="description" content="Rações para pets - PetShop Amigo Fiel. Rações premium para cães e gatos de todas as idades.">
+    <title>Rações - PetShop Amigo Fiel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- ==================== CABEÇALHO ==================== -->
-    <header>
-        <h1>&#128062; PetShop Amigo Fiel</h1>
-        <p>Cuidando do seu melhor amigo com carinho e dedicação!</p>
-        <hr>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="acessorios.html">Acessórios</a> |
-            <a href="racoes.html"><strong>Rações</strong></a> |
-            <a href="higiene.html">Higiene e Limpeza</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
-        <hr>
-    </header>
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- ==================== BARRA SUPERIOR ==================== -->
+    <div class="top-bar" role="complementary" aria-label="Informações rápidas de contato">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap gap-1">
+            <span>
+                <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                Rua dos Animais, 123 - Centro - São Paulo/SP
+            </span>
+            <span>
+                <i class="bi bi-telephone-fill" aria-hidden="true"></i> (11) 1234-5678
+                &nbsp;|&nbsp;
+                <i class="bi bi-clock-fill" aria-hidden="true"></i> Seg–Sáb: 8h–19h
+                &nbsp;
+                <span id="status-funcionamento" aria-live="polite" aria-atomic="true"></span>
+            </span>
+        </div>
+    </div>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar navbar-expand-lg navbar-custom" role="navigation" aria-label="Menu principal de navegação">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" aria-label="PetShop Amigo Fiel - Ir para a página inicial">
+                &#128062; PetShop <span>Amigo Fiel</span>
+            </a>
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                    aria-controls="navbarMain" aria-expanded="false"
+                    aria-label="Abrir ou fechar o menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false" aria-current="true">
+                            Produtos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="acessorios.html">
+                                    <i class="bi bi-bag-heart me-2" aria-hidden="true"></i>Acessórios
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item fw-bold" href="racoes.html" aria-current="page">
+                                    <i class="bi bi-bag me-2" aria-hidden="true"></i>Rações
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="higiene.html">
+                                    <i class="bi bi-droplet me-2" aria-hidden="true"></i>Higiene e Limpeza
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                </ul>
+                <div id="relogio-widget" class="ms-3 d-none d-lg-block"
+                     aria-live="polite" aria-label="Data e hora atual" role="timer">
+                    Carregando...
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
-    <main>
-        <h2>Rações Não Perecíveis</h2>
-        <p>
-            Oferecemos rações de alta qualidade e não perecíveis para cães e gatos.
-            Marcas confiáveis que garantem a nutrição completa e balanceada do seu pet.
-        </p>
+    <main id="conteudo-principal">
 
-        <br>
+        <!-- Hero da página -->
+        <div class="page-hero" style="background: linear-gradient(135deg, #b5451b 0%, #f77f00 100%);" role="banner">
+            <div class="container">
+                <h1><i class="bi bi-bag me-2" aria-hidden="true"></i>Rações para Pets</h1>
+                <p>Alimentação de alta qualidade para o seu melhor amigo!</p>
+                <nav aria-label="Breadcrumb de navegação">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item">
+                            <a href="index.html" style="color: rgba(255,255,255,0.7);">Início</a>
+                        </li>
+                        <li class="breadcrumb-item active" style="color: #fff;" aria-current="page">Rações</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
 
-        <!-- Produto 1 -->
-        <table border="1" cellpadding="10" cellspacing="0">
-            <tr>
-                <th colspan="2">Ração Premium para Cães Adultos - 15kg</th>
-            </tr>
-            <tr>
-                <td>
-                    <img src="imagens/racao-caes.jpg" alt="Ração Premium para Cães Adultos" width="250" height="250">
-                </td>
-                <td>
-                    <p><strong>Descrição:</strong></p>
-                    <p>
-                        Ração premium especialmente formulada para cães adultos de todas as raças.
-                        Contém proteínas de alta qualidade, vitaminas e minerais essenciais para
-                        manter a saúde, a energia e a pelagem brilhante do seu cão. Sabor frango
-                        e arroz integral. Não contém corantes nem aromatizantes artificiais.
-                    </p>
-                    <ul>
-                        <li><strong>Peso:</strong> 15kg</li>
-                        <li><strong>Sabor:</strong> Frango e Arroz Integral</li>
-                        <li><strong>Indicação:</strong> Cães adultos de todas as raças</li>
-                        <li><strong>Validade:</strong> 18 meses a partir da fabricação</li>
-                        <li><strong>Tipo:</strong> Ração seca não perecível</li>
-                    </ul>
-                    <p><strong>Valor: R$ 129,90</strong></p>
-                </td>
-            </tr>
-        </table>
+        <!-- Listagem de produtos -->
+        <section class="container mb-5" aria-labelledby="titulo-racoes">
+            <h2 class="section-title" id="titulo-racoes">Nossos Produtos</h2>
+            <div class="row g-4">
 
-        <br>
+                <!-- Produto 1: Ração Premium Cães Adultos -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="card card-produto" aria-label="Produto: Ração Premium para Cães Adultos">
+                        <!-- alt descreve o produto detalhadamente para leitores de tela -->
+                        <img src="imagens/racao-caes.jpg"
+                             alt="Embalagem de 15kg da Ração Premium para Cães Adultos, com sabor de frango e arroz"
+                             class="card-img-top"
+                             width="400" height="200"
+                             loading="lazy"
+                             data-fallback="true">
+                        <div class="img-placeholder" aria-hidden="true">🦴</div>
+                        <div class="card-body">
+                            <span class="badge badge-categoria mb-2">Cães</span>
+                            <h3 class="card-title h5">Ração Premium – Cães Adultos</h3>
+                            <p class="card-text text-muted">
+                                Ração seca de alta qualidade para cães adultos de médio e grande porte.
+                                Rico em proteínas, vitaminas e minerais essenciais. Embalagem: <strong>15kg</strong>.
+                            </p>
+                            <p class="preco" aria-label="Preço: R$ 129,90">R$ 129,90</p>
+                            <a href="contato.html" class="btn btn-secondary-custom w-100"
+                               aria-label="Entrar em contato para comprar a Ração Premium para Cães Adultos">
+                                <i class="bi bi-cart-plus me-1" aria-hidden="true"></i> Tenho Interesse
+                            </a>
+                        </div>
+                    </article>
+                </div>
 
-        <!-- Produto 2 -->
-        <table border="1" cellpadding="10" cellspacing="0">
-            <tr>
-                <th colspan="2">Ração para Gatos Castrados - 10kg</th>
-            </tr>
-            <tr>
-                <td>
-                    <img src="imagens/racao-gatos.jpg" alt="Ração para Gatos Castrados" width="250" height="250">
-                </td>
-                <td>
-                    <p><strong>Descrição:</strong></p>
-                    <p>
-                        Ração completa e balanceada, desenvolvida especialmente para gatos
-                        castrados. Formulação com teor reduzido de gordura para auxiliar no
-                        controle de peso, além de ingredientes que contribuem para a saúde
-                        do trato urinário. Sabor salmão e vegetais.
-                    </p>
-                    <ul>
-                        <li><strong>Peso:</strong> 10kg</li>
-                        <li><strong>Sabor:</strong> Salmão e Vegetais</li>
-                        <li><strong>Indicação:</strong> Gatos castrados adultos</li>
-                        <li><strong>Validade:</strong> 18 meses a partir da fabricação</li>
-                        <li><strong>Tipo:</strong> Ração seca não perecível</li>
-                    </ul>
-                    <p><strong>Valor: R$ 109,90</strong></p>
-                </td>
-            </tr>
-        </table>
+                <!-- Produto 2: Ração Gatos Castrados -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="card card-produto" aria-label="Produto: Ração para Gatos Castrados">
+                        <img src="imagens/racao-gatos.jpg"
+                             alt="Embalagem de 10kg da Ração especial para Gatos Castrados, com fórmula de controle de peso"
+                             class="card-img-top"
+                             width="400" height="200"
+                             loading="lazy"
+                             data-fallback="true">
+                        <div class="img-placeholder" aria-hidden="true">🐱</div>
+                        <div class="card-body">
+                            <span class="badge badge-categoria mb-2">Gatos</span>
+                            <h3 class="card-title h5">Ração Gatos Castrados</h3>
+                            <p class="card-text text-muted">
+                                Formulação especial para gatos castrados, com controle calórico
+                                e nutrientes essenciais para manutenção do peso ideal. Embalagem: <strong>10kg</strong>.
+                            </p>
+                            <p class="preco" aria-label="Preço: R$ 109,90">R$ 109,90</p>
+                            <a href="contato.html" class="btn btn-secondary-custom w-100"
+                               aria-label="Entrar em contato para comprar a Ração para Gatos Castrados">
+                                <i class="bi bi-cart-plus me-1" aria-hidden="true"></i> Tenho Interesse
+                            </a>
+                        </div>
+                    </article>
+                </div>
 
-        <br>
-        <p><a href="index.html">&larr; Voltar para a Página Inicial</a></p>
+                <!-- Produto 3: Ração Filhotes -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="card card-produto" aria-label="Produto: Ração para Filhotes">
+                        <img src="imagens/racao-filhotes.jpg"
+                             alt="Embalagem de 3kg da Ração Premium para Filhotes, com DHA para desenvolvimento cerebral"
+                             class="card-img-top"
+                             width="400" height="200"
+                             loading="lazy"
+                             data-fallback="true">
+                        <div class="img-placeholder" aria-hidden="true">🐾</div>
+                        <div class="card-body">
+                            <span class="badge badge-categoria mb-2">Filhotes</span>
+                            <h3 class="card-title h5">Ração Premium – Filhotes</h3>
+                            <p class="card-text text-muted">
+                                Nutrição completa para filhotes em crescimento. Com DHA para
+                                desenvolvimento cerebral e cálcio para ossos fortes. Embalagem: <strong>3kg</strong>.
+                            </p>
+                            <p class="preco" aria-label="Preço: R$ 59,90">R$ 59,90</p>
+                            <a href="contato.html" class="btn btn-secondary-custom w-100"
+                               aria-label="Entrar em contato para comprar a Ração Premium para Filhotes">
+                                <i class="bi bi-cart-plus me-1" aria-hidden="true"></i> Tenho Interesse
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="container mb-5 text-center">
+            <p class="text-muted">Explore outras categorias ou agende um serviço:</p>
+            <a href="acessorios.html" class="btn btn-secondary-custom me-2"
+               aria-label="Ver produtos da categoria Acessórios">
+                <i class="bi bi-bag-heart me-1" aria-hidden="true"></i> Acessórios
+            </a>
+            <a href="agendamento.html" class="btn btn-primary-custom"
+               aria-label="Agendar serviço de banho ou tosa">
+                <i class="bi bi-calendar-check me-1" aria-hidden="true"></i> Agendar Serviço
+            </a>
+        </div>
+
     </main>
 
-    <br>
-    <hr>
-
     <!-- ==================== RODAPÉ ==================== -->
-    <footer>
-        <h3>PetShop Amigo Fiel</h3>
-        <p>
-            <strong>Endereço:</strong> Rua dos Animais, 123 - Centro - São Paulo/SP - CEP: 01001-000<br>
-            <strong>Telefone:</strong> (11) 1234-5678 | <strong>WhatsApp:</strong> (11) 91234-5678<br>
-            <strong>E-mail:</strong> contato@petshopamigofiel.com.br<br>
-            <strong>Horário de funcionamento:</strong> Segunda a Sábado, das 8h às 19h
-        </p>
-        <hr>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="acessorios.html">Acessórios</a> |
-            <a href="racoes.html">Rações</a> |
-            <a href="higiene.html">Higiene e Limpeza</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
-        <hr>
-        <p>
-            &copy; 2026 PetShop Amigo Fiel - Todos os direitos reservados.<br>
-            Desenvolvido por Filipe Neves - Projeto Acadêmico - Fundamentos de Sistemas Web
-        </p>
+    <footer role="contentinfo">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>&#128062; PetShop Amigo Fiel</h5>
+                    <p class="small" style="color: rgba(255,255,255,0.7);">
+                        Cuidando do seu melhor amigo com carinho e dedicação desde 2014.
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6>Navegação</h6>
+                    <nav aria-label="Links de navegação no rodapé">
+                        <ul class="list-unstyled small">
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="acessorios.html">Acessórios</a></li>
+                            <li><a href="racoes.html">Rações</a></li>
+                            <li><a href="higiene.html">Higiene e Limpeza</a></li>
+                            <li><a href="servicos.html">Serviços</a></li>
+                            <li><a href="cadastro.html">Cadastro</a></li>
+                            <li><a href="agendamento.html">Agendamento</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6>Contato</h6>
+                    <address class="small" style="font-style: normal;">
+                        <p><i class="bi bi-geo-alt-fill me-1" aria-hidden="true"></i> Rua dos Animais, 123 - São Paulo/SP</p>
+                        <p><i class="bi bi-telephone-fill me-1" aria-hidden="true"></i> (11) 1234-5678</p>
+                        <p><i class="bi bi-whatsapp me-1" aria-hidden="true"></i> (11) 91234-5678</p>
+                        <p><i class="bi bi-clock-fill me-1" aria-hidden="true"></i> Seg–Sáb: 8h às 19h</p>
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center py-3">
+            <small>
+                &copy; 2026 PetShop Amigo Fiel - Todos os direitos reservados. |
+                Desenvolvido por Filipe Neves &mdash; Projeto Acadêmico &mdash; Fundamentos de Sistemas Web
+            </small>
+        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -3,123 +3,472 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PetShop Amigo Fiel - Produtos e serviços para o seu pet em São Paulo. Acessórios, rações, higiene, banho e tosa.">
     <title>PetShop Amigo Fiel - Página Inicial</title>
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- ==================== CABEÇALHO ==================== -->
-    <header>
-        <h1>&#128062; PetShop Amigo Fiel</h1>
-        <p>Cuidando do seu melhor amigo com carinho e dedicação!</p>
-        <hr>
-        <nav>
-            <a href="index.html"><strong>Início</strong></a> |
-            <a href="acessorios.html">Acessórios</a> |
-            <a href="racoes.html">Rações</a> |
-            <a href="higiene.html">Higiene e Limpeza</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
-        <hr>
-    </header>
+    <!-- Acessibilidade: link oculto para pular a navegação e ir direto ao conteúdo -->
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- ==================== BARRA SUPERIOR ==================== -->
+    <div class="top-bar" role="complementary" aria-label="Informações rápidas de contato">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap gap-1">
+            <span>
+                <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                Rua dos Animais, 123 - Centro - São Paulo/SP
+            </span>
+            <span>
+                <i class="bi bi-telephone-fill" aria-hidden="true"></i> (11) 1234-5678
+                &nbsp;|&nbsp;
+                <i class="bi bi-whatsapp" aria-hidden="true"></i> (11) 91234-5678
+                &nbsp;|&nbsp;
+                <i class="bi bi-clock-fill" aria-hidden="true"></i> Seg–Sáb: 8h–19h
+                &nbsp;
+                <span id="status-funcionamento" aria-live="polite" aria-atomic="true"></span>
+            </span>
+        </div>
+    </div>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar navbar-expand-lg navbar-custom" role="navigation" aria-label="Menu principal de navegação">
+        <div class="container">
+            <!-- Logo / Nome do petshop -->
+            <a class="navbar-brand" href="index.html" aria-label="PetShop Amigo Fiel - Ir para a página inicial">
+                &#128062; PetShop <span>Amigo Fiel</span>
+            </a>
+
+            <!-- Botão hamburguer para dispositivos móveis -->
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                    aria-controls="navbarMain" aria-expanded="false"
+                    aria-label="Abrir ou fechar o menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links de navegação -->
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html" aria-current="page">Início</a>
+                    </li>
+                    <!-- Dropdown de Produtos -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false"
+                           aria-haspopup="true">
+                            Produtos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="acessorios.html">
+                                    <i class="bi bi-bag-heart me-2" aria-hidden="true"></i>Acessórios
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="racoes.html">
+                                    <i class="bi bi-bag me-2" aria-hidden="true"></i>Rações
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="higiene.html">
+                                    <i class="bi bi-droplet me-2" aria-hidden="true"></i>Higiene e Limpeza
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicos.html">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro.html">Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agendamento.html">Agendamento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+
+                <!-- Relógio com data e hora em tempo real (atualizado por script.js) -->
+                <div id="relogio-widget" class="ms-3 d-none d-lg-block"
+                     aria-live="polite" aria-label="Data e hora atual" role="timer">
+                    Carregando...
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
-    <main>
-        <h2>Bem-vindo ao PetShop Amigo Fiel!</h2>
-        <p>
-            Somos um petshop completo, oferecendo os melhores produtos e serviços para o seu pet.
-            Trabalhamos com <strong>acessórios</strong>, <strong>rações não perecíveis</strong>,
-            <strong>produtos de higiene e limpeza</strong>, além de serviços de <strong>banho e tosa</strong>
-            com opção de <strong>tele-busca</strong>.
-        </p>
+    <main id="conteudo-principal">
 
-        <br>
+        <!-- Saudação dinâmica (bom dia / boa tarde / boa noite) -->
+        <div class="bg-light border-bottom py-2 text-center">
+            <small class="text-muted">
+                <span id="saudacao" aria-live="polite"></span>
+                &mdash; Bem-vindo ao PetShop Amigo Fiel!
+            </small>
+        </div>
 
-        <h2>Nossas Categorias de Produtos</h2>
+        <!-- ==================== CARROSSEL ==================== -->
+        <section aria-label="Carrossel de destaques do petshop" role="region">
+            <div id="carrossel-principal" class="carousel slide carousel-fade"
+                 data-bs-ride="carousel" data-bs-interval="5000">
 
-        <table border="1" cellpadding="10" cellspacing="0">
-            <tr>
-                <th>Categoria</th>
-                <th>Descrição</th>
-                <th>Ver Produtos</th>
-            </tr>
-            <tr>
-                <td>
-                    <img src="imagens/categoria-acessorios.jpg" alt="Acessórios para Pets" width="150" height="100">
-                    <br>
-                    <strong>Acessórios</strong>
-                </td>
-                <td>Roupas, brinquedos, camas e muito mais para deixar seu pet confortável e estiloso.</td>
-                <td><a href="acessorios.html">Ver Acessórios</a></td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="imagens/categoria-racoes.jpg" alt="Rações para Pets" width="150" height="100">
-                    <br>
-                    <strong>Rações</strong>
-                </td>
-                <td>Rações não perecíveis de alta qualidade para cães e gatos de todas as idades.</td>
-                <td><a href="racoes.html">Ver Rações</a></td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="imagens/categoria-higiene.jpg" alt="Produtos de Higiene" width="150" height="100">
-                    <br>
-                    <strong>Higiene e Limpeza</strong>
-                </td>
-                <td>Tapetes higiênicos, fraldas descartáveis e outros produtos para manter a higiene do seu pet.</td>
-                <td><a href="higiene.html">Ver Produtos</a></td>
-            </tr>
-        </table>
+                <!-- Indicadores (bolinhas de navegação) -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carrossel-principal" data-bs-slide-to="0"
+                            class="active" aria-current="true"
+                            aria-label="Slide 1: Acessórios para seu Pet"></button>
+                    <button type="button" data-bs-target="#carrossel-principal" data-bs-slide-to="1"
+                            aria-label="Slide 2: Rações Premium"></button>
+                    <button type="button" data-bs-target="#carrossel-principal" data-bs-slide-to="2"
+                            aria-label="Slide 3: Banho e Tosa Profissional"></button>
+                </div>
 
-        <br>
+                <!-- Slides do carrossel -->
+                <div class="carousel-inner">
 
-        <h2>Nossos Serviços</h2>
-        <p>
-            Oferecemos serviços de <strong>banho e tosa</strong> profissionais, com a opção de
-            <strong>tele-busca</strong> — buscamos e entregamos seu pet no conforto da sua casa!
-        </p>
-        <p><a href="servicos.html">Confira nossos serviços e valores &rarr;</a></p>
+                    <!-- Slide 1: Acessórios -->
+                    <div class="carousel-item active"
+                         role="group" aria-roledescription="slide"
+                         aria-label="Slide 1 de 3 — Acessórios para seu Pet">
+                        <div class="slide-bg slide-1">
+                            <div class="carousel-caption-custom">
+                                <div style="font-size: 4rem;" aria-hidden="true">🎀</div>
+                                <h2>Acessórios para seu Pet</h2>
+                                <p>Roupas, brinquedos, camas e muito mais para deixar seu pet confortável e estiloso!</p>
+                                <a href="acessorios.html" class="btn btn-light btn-lg"
+                                   aria-label="Ver todos os acessórios disponíveis">
+                                    <i class="bi bi-arrow-right-circle me-1" aria-hidden="true"></i>
+                                    Ver Acessórios
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-        <br>
+                    <!-- Slide 2: Rações -->
+                    <div class="carousel-item"
+                         role="group" aria-roledescription="slide"
+                         aria-label="Slide 2 de 3 — Rações Premium">
+                        <div class="slide-bg slide-2">
+                            <div class="carousel-caption-custom">
+                                <div style="font-size: 4rem;" aria-hidden="true">🦴</div>
+                                <h2>Rações Premium</h2>
+                                <p>Alimentação de alta qualidade para cães e gatos de todas as idades e portes!</p>
+                                <a href="racoes.html" class="btn btn-light btn-lg"
+                                   aria-label="Ver todas as rações disponíveis">
+                                    <i class="bi bi-arrow-right-circle me-1" aria-hidden="true"></i>
+                                    Ver Rações
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-        <h2>Por que escolher o PetShop Amigo Fiel?</h2>
-        <ul>
-            <li>Mais de 10 anos de experiência no mercado pet</li>
-            <li>Produtos de marcas renomadas e com garantia de qualidade</li>
-            <li>Profissionais qualificados e apaixonados por animais</li>
-            <li>Serviço de tele-busca para maior comodidade</li>
-            <li>Preços justos e competitivos</li>
-        </ul>
+                    <!-- Slide 3: Banho e Tosa -->
+                    <div class="carousel-item"
+                         role="group" aria-roledescription="slide"
+                         aria-label="Slide 3 de 3 — Banho e Tosa Profissional">
+                        <div class="slide-bg slide-3">
+                            <div class="carousel-caption-custom">
+                                <div style="font-size: 4rem;" aria-hidden="true">✂️</div>
+                                <h2>Banho e Tosa Profissional</h2>
+                                <p>Serviço completo com opção de tele-busca! Agendamos no dia e horário que você preferir.</p>
+                                <a href="agendamento.html" class="btn btn-light btn-lg"
+                                   aria-label="Agendar serviço de banho ou tosa">
+                                    <i class="bi bi-calendar-check me-1" aria-hidden="true"></i>
+                                    Agendar Agora
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Setas de navegação do carrossel -->
+                <button class="carousel-control-prev" type="button"
+                        data-bs-target="#carrossel-principal" data-bs-slide="prev"
+                        aria-label="Slide anterior">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button"
+                        data-bs-target="#carrossel-principal" data-bs-slide="next"
+                        aria-label="Próximo slide">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </section>
+
+        <!-- ==================== CATEGORIAS DE PRODUTOS ==================== -->
+        <section class="container my-5" aria-labelledby="titulo-categorias">
+            <h2 class="section-title text-center" id="titulo-categorias">
+                Nossas Categorias de Produtos
+            </h2>
+            <div class="row g-4">
+
+                <!-- Card: Acessórios -->
+                <div class="col-md-4">
+                    <article class="card card-produto text-center" aria-label="Categoria Acessórios">
+                        <div class="card-body p-4">
+                            <div class="feature-icon mb-3"
+                                 style="background: linear-gradient(135deg, #2d6a4f, #52b788);"
+                                 aria-hidden="true">🎀</div>
+                            <h3 class="card-title h5">Acessórios</h3>
+                            <p class="card-text text-muted">
+                                Roupas, brinquedos, camas e muito mais para deixar seu pet
+                                confortável e estiloso.
+                            </p>
+                            <a href="acessorios.html" class="btn btn-primary-custom"
+                               aria-label="Ver todos os acessórios para pets">
+                                <i class="bi bi-arrow-right-circle me-1" aria-hidden="true"></i>
+                                Ver Produtos
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Card: Rações -->
+                <div class="col-md-4">
+                    <article class="card card-produto text-center" aria-label="Categoria Rações">
+                        <div class="card-body p-4">
+                            <div class="feature-icon mb-3"
+                                 style="background: linear-gradient(135deg, #b5451b, #f77f00);"
+                                 aria-hidden="true">🦴</div>
+                            <h3 class="card-title h5">Rações</h3>
+                            <p class="card-text text-muted">
+                                Rações não perecíveis de alta qualidade para cães e gatos
+                                de todas as idades.
+                            </p>
+                            <a href="racoes.html" class="btn btn-secondary-custom"
+                               aria-label="Ver todas as rações para pets">
+                                <i class="bi bi-arrow-right-circle me-1" aria-hidden="true"></i>
+                                Ver Produtos
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Card: Higiene -->
+                <div class="col-md-4">
+                    <article class="card card-produto text-center" aria-label="Categoria Higiene e Limpeza">
+                        <div class="card-body p-4">
+                            <div class="feature-icon mb-3"
+                                 style="background: linear-gradient(135deg, #1a4d6e, #2196a5);"
+                                 aria-hidden="true">🧴</div>
+                            <h3 class="card-title h5">Higiene e Limpeza</h3>
+                            <p class="card-text text-muted">
+                                Tapetes higiênicos, fraldas e outros produtos para manter
+                                a higiene do seu pet em dia.
+                            </p>
+                            <a href="higiene.html" class="btn btn-primary-custom"
+                               aria-label="Ver todos os produtos de higiene para pets">
+                                <i class="bi bi-arrow-right-circle me-1" aria-hidden="true"></i>
+                                Ver Produtos
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== NOSSOS SERVIÇOS ==================== -->
+        <section class="bg-light py-5" aria-labelledby="titulo-servicos">
+            <div class="container">
+                <h2 class="section-title text-center" id="titulo-servicos">Nossos Serviços</h2>
+                <div class="row g-4 text-center">
+                    <div class="col-md-4">
+                        <div class="p-3">
+                            <div style="font-size: 2.8rem;" aria-hidden="true">🛁</div>
+                            <h3 class="h5 mt-2 fw-bold">Banho</h3>
+                            <p class="text-muted">Banho completo com produtos premium, a partir de <strong>R$ 50,00</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3">
+                            <div style="font-size: 2.8rem;" aria-hidden="true">✂️</div>
+                            <h3 class="h5 mt-2 fw-bold">Tosa</h3>
+                            <p class="text-muted">Tosa profissional para diversas raças, a partir de <strong>R$ 60,00</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3">
+                            <div style="font-size: 2.8rem;" aria-hidden="true">🚗</div>
+                            <h3 class="h5 mt-2 fw-bold">Tele-Busca</h3>
+                            <p class="text-muted">Buscamos e entregamos seu pet! Agendamento com data e horário convenientes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="servicos.html" class="btn btn-secondary-custom me-2"
+                       aria-label="Ver tabela completa de serviços e preços">
+                        <i class="bi bi-list-check me-1" aria-hidden="true"></i> Ver Preços
+                    </a>
+                    <a href="agendamento.html" class="btn btn-primary-custom"
+                       aria-label="Agendar um serviço de banho ou tosa">
+                        <i class="bi bi-calendar-plus me-1" aria-hidden="true"></i> Agendar Agora
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== POR QUE NOS ESCOLHER ==================== -->
+        <section class="container my-5" aria-labelledby="titulo-diferenciais">
+            <h2 class="section-title text-center" id="titulo-diferenciais">
+                Por que escolher o PetShop Amigo Fiel?
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-4 col-sm-6">
+                    <div class="d-flex align-items-start gap-3">
+                        <i class="bi bi-award-fill fs-3" style="color: var(--cor-primaria);" aria-hidden="true"></i>
+                        <div>
+                            <h3 class="h6 fw-bold">Mais de 10 anos de experiência</h3>
+                            <p class="text-muted small mb-0">Tradição e confiança no mercado pet de São Paulo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="d-flex align-items-start gap-3">
+                        <i class="bi bi-shield-check-fill fs-3" style="color: var(--cor-primaria);" aria-hidden="true"></i>
+                        <div>
+                            <h3 class="h6 fw-bold">Marcas com garantia de qualidade</h3>
+                            <p class="text-muted small mb-0">Produtos de procedência garantida e aprovados por veterinários.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="d-flex align-items-start gap-3">
+                        <i class="bi bi-people-fill fs-3" style="color: var(--cor-primaria);" aria-hidden="true"></i>
+                        <div>
+                            <h3 class="h6 fw-bold">Profissionais qualificados</h3>
+                            <p class="text-muted small mb-0">Equipe apaixonada por animais e especializada em bem-estar animal.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="d-flex align-items-start gap-3">
+                        <i class="bi bi-truck fs-3" style="color: var(--cor-secundaria);" aria-hidden="true"></i>
+                        <div>
+                            <h3 class="h6 fw-bold">Serviço de tele-busca</h3>
+                            <p class="text-muted small mb-0">Buscamos e entregamos seu pet com segurança e conforto.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="d-flex align-items-start gap-3">
+                        <i class="bi bi-tag-fill fs-3" style="color: var(--cor-secundaria);" aria-hidden="true"></i>
+                        <div>
+                            <h3 class="h6 fw-bold">Preços justos e competitivos</h3>
+                            <p class="text-muted small mb-0">O melhor custo-benefício para você e seu melhor amigo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="d-flex align-items-start gap-3">
+                        <i class="bi bi-heart-fill fs-3" style="color: #dc3545;" aria-hidden="true"></i>
+                        <div>
+                            <h3 class="h6 fw-bold">Cuidado com amor</h3>
+                            <p class="text-muted small mb-0">Tratamos cada pet com o carinho que ele merece.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CHAMADA PARA AÇÃO ==================== -->
+        <section class="py-4 text-center border-top border-bottom bg-white"
+                 aria-label="Chamada para cadastro e agendamento">
+            <div class="container">
+                <h2 class="h4 mb-2">Pronto para cuidar do seu pet? 🐾</h2>
+                <p class="text-muted mb-3">Cadastre seu pet e agende um serviço agora mesmo!</p>
+                <a href="cadastro.html" class="btn btn-primary-custom me-2"
+                   aria-label="Ir para o formulário de cadastro de cliente e pet">
+                    <i class="bi bi-person-plus me-1" aria-hidden="true"></i> Cadastrar
+                </a>
+                <a href="agendamento.html" class="btn btn-secondary-custom"
+                   aria-label="Ir para o formulário de agendamento de serviço">
+                    <i class="bi bi-calendar-plus me-1" aria-hidden="true"></i> Agendar
+                </a>
+            </div>
+        </section>
+
     </main>
 
-    <br>
-    <hr>
-
     <!-- ==================== RODAPÉ ==================== -->
-    <footer>
-        <h3>PetShop Amigo Fiel</h3>
-        <p>
-            <strong>Endereço:</strong> Rua dos Animais, 123 - Centro - São Paulo/SP - CEP: 01001-000<br>
-            <strong>Telefone:</strong> (11) 1234-5678 | <strong>WhatsApp:</strong> (11) 91234-5678<br>
-            <strong>E-mail:</strong> contato@petshopamigofiel.com.br<br>
-            <strong>Horário de funcionamento:</strong> Segunda a Sábado, das 8h às 19h
-        </p>
-        <hr>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="acessorios.html">Acessórios</a> |
-            <a href="racoes.html">Rações</a> |
-            <a href="higiene.html">Higiene e Limpeza</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
-        <hr>
-        <p>
-            &copy; 2026 PetShop Amigo Fiel - Todos os direitos reservados.<br>
-            Desenvolvido por Filipe Neves - Projeto Acadêmico - Fundamentos de Sistemas Web
-        </p>
+    <footer class="mt-0" role="contentinfo">
+        <div class="container py-4">
+            <div class="row">
+                <!-- Informações do petshop -->
+                <div class="col-md-4 mb-4">
+                    <h5>&#128062; PetShop Amigo Fiel</h5>
+                    <p class="small" style="color: rgba(255,255,255,0.7);">
+                        Cuidando do seu melhor amigo com carinho e dedicação desde 2014.
+                    </p>
+                </div>
+                <!-- Links de navegação no rodapé -->
+                <div class="col-md-4 mb-4">
+                    <h6>Navegação</h6>
+                    <nav aria-label="Links de navegação no rodapé">
+                        <ul class="list-unstyled small">
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="acessorios.html">Acessórios</a></li>
+                            <li><a href="racoes.html">Rações</a></li>
+                            <li><a href="higiene.html">Higiene e Limpeza</a></li>
+                            <li><a href="servicos.html">Serviços</a></li>
+                            <li><a href="cadastro.html">Cadastro</a></li>
+                            <li><a href="agendamento.html">Agendamento</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Dados de contato -->
+                <div class="col-md-4 mb-4">
+                    <h6>Contato</h6>
+                    <address class="small" style="font-style: normal;">
+                        <p>
+                            <i class="bi bi-geo-alt-fill me-1" aria-hidden="true"></i>
+                            Rua dos Animais, 123 - Centro<br>
+                            São Paulo/SP - CEP: 01001-000
+                        </p>
+                        <p>
+                            <i class="bi bi-telephone-fill me-1" aria-hidden="true"></i>
+                            (11) 1234-5678
+                        </p>
+                        <p>
+                            <i class="bi bi-whatsapp me-1" aria-hidden="true"></i>
+                            (11) 91234-5678
+                        </p>
+                        <p>
+                            <i class="bi bi-envelope-fill me-1" aria-hidden="true"></i>
+                            <a href="mailto:contato@petshopamigofiel.com.br">
+                                contato@petshopamigofiel.com.br
+                            </a>
+                        </p>
+                        <p>
+                            <i class="bi bi-clock-fill me-1" aria-hidden="true"></i>
+                            Segunda a Sábado: 8h às 19h
+                        </p>
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center py-3">
+            <small>
+                &copy; 2026 PetShop Amigo Fiel - Todos os direitos reservados. |
+                Desenvolvido por Filipe Neves &mdash; Projeto Acadêmico &mdash; Fundamentos de Sistemas Web
+            </small>
+        </div>
     </footer>
 
+    <!-- Bootstrap 5 JavaScript Bundle (inclui Popper.js para dropdowns) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts Personalizados -->
+    <script src="js/script.js"></script>
 </body>
 </html>

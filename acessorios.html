@@ -3,125 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetShop Amigo Fiel - Acessórios</title>
+    <meta name="description" content="Acessórios para pets - PetShop Amigo Fiel. Roupas, brinquedos e camas para seu pet.">
+    <title>Acessórios - PetShop Amigo Fiel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- ==================== CABEÇALHO ==================== -->
-    <header>
-        <h1>&#128062; PetShop Amigo Fiel</h1>
-        <p>Cuidando do seu melhor amigo com carinho e dedicação!</p>
-        <hr>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="acessorios.html"><strong>Acessórios</strong></a> |
-            <a href="racoes.html">Rações</a> |
-            <a href="higiene.html">Higiene e Limpeza</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
-        <hr>
-    </header>
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- ==================== BARRA SUPERIOR ==================== -->
+    <div class="top-bar" role="complementary" aria-label="Informações rápidas de contato">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap gap-1">
+            <span>
+                <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                Rua dos Animais, 123 - Centro - São Paulo/SP
+            </span>
+            <span>
+                <i class="bi bi-telephone-fill" aria-hidden="true"></i> (11) 1234-5678
+                &nbsp;|&nbsp;
+                <i class="bi bi-clock-fill" aria-hidden="true"></i> Seg–Sáb: 8h–19h
+                &nbsp;
+                <span id="status-funcionamento" aria-live="polite" aria-atomic="true"></span>
+            </span>
+        </div>
+    </div>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar navbar-expand-lg navbar-custom" role="navigation" aria-label="Menu principal de navegação">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" aria-label="PetShop Amigo Fiel - Ir para a página inicial">
+                &#128062; PetShop <span>Amigo Fiel</span>
+            </a>
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                    aria-controls="navbarMain" aria-expanded="false"
+                    aria-label="Abrir ou fechar o menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false" aria-current="true">
+                            Produtos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item fw-bold" href="acessorios.html" aria-current="page">
+                                    <i class="bi bi-bag-heart me-2" aria-hidden="true"></i>Acessórios
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="racoes.html">
+                                    <i class="bi bi-bag me-2" aria-hidden="true"></i>Rações
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="higiene.html">
+                                    <i class="bi bi-droplet me-2" aria-hidden="true"></i>Higiene e Limpeza
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                </ul>
+                <div id="relogio-widget" class="ms-3 d-none d-lg-block"
+                     aria-live="polite" aria-label="Data e hora atual" role="timer">
+                    Carregando...
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
-    <main>
-        <h2>Acessórios para Pets</h2>
-        <p>
-            Confira nossa seleção de acessórios para deixar seu pet ainda mais confortável e estiloso!
-            Temos roupas, brinquedos, camas e muito mais.
-        </p>
+    <main id="conteudo-principal">
 
-        <br>
+        <!-- Hero da página interna -->
+        <div class="page-hero" role="banner">
+            <div class="container">
+                <h1><i class="bi bi-bag-heart me-2" aria-hidden="true"></i>Acessórios para Pets</h1>
+                <p>Tudo para deixar seu pet confortável, estiloso e feliz!</p>
+                <nav aria-label="Breadcrumb de navegação">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item">
+                            <a href="index.html" style="color: rgba(255,255,255,0.7);">Início</a>
+                        </li>
+                        <li class="breadcrumb-item active" style="color: #fff;" aria-current="page">Acessórios</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
 
-        <!-- Produto 1 -->
-        <table border="1" cellpadding="10" cellspacing="0">
-            <tr>
-                <th colspan="2">Camiseta Pet - Roupa para Cachorro</th>
-            </tr>
-            <tr>
-                <td>
-                    <img src="imagens/camiseta-pet.jpg" alt="Camiseta Pet para Cachorro" width="250" height="250">
-                </td>
-                <td>
-                    <p><strong>Descrição:</strong></p>
-                    <p>
-                        Camiseta confortável para cães de pequeno e médio porte. Confeccionada em
-                        malha de algodão macia e respirável, ideal para dias mais frescos ou para
-                        deixar seu pet com muito estilo. Disponível nos tamanhos P, M e G e nas
-                        cores azul, vermelho e amarelo.
-                    </p>
-                    <ul>
-                        <li><strong>Material:</strong> 100% algodão</li>
-                        <li><strong>Tamanhos:</strong> P, M, G</li>
-                        <li><strong>Cores disponíveis:</strong> Azul, Vermelho, Amarelo</li>
-                        <li><strong>Indicação:</strong> Cães de pequeno e médio porte</li>
-                    </ul>
-                    <p><strong>Valor: R$ 45,90</strong></p>
-                </td>
-            </tr>
-        </table>
+        <!-- Listagem de produtos -->
+        <section class="container mb-5" aria-labelledby="titulo-acessorios">
+            <h2 class="section-title" id="titulo-acessorios">Nossos Produtos</h2>
+            <div class="row g-4">
 
-        <br>
+                <!-- Produto 1: Camiseta Pet -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="card card-produto" aria-label="Produto: Camiseta Pet">
+                        <!-- Imagem do produto com texto alternativo descritivo para acessibilidade -->
+                        <img src="imagens/camiseta-pet.jpg"
+                             alt="Camiseta colorida para pets, disponível em tamanhos P, M e G para cães de pequeno a médio porte"
+                             class="card-img-top"
+                             width="400" height="200"
+                             loading="lazy"
+                             data-fallback="true">
+                        <!-- Placeholder exibido se a imagem não carregar -->
+                        <div class="img-placeholder" aria-hidden="true">🎀</div>
+                        <div class="card-body">
+                            <span class="badge badge-categoria mb-2">Roupas</span>
+                            <h3 class="card-title h5">Camiseta Pet</h3>
+                            <p class="card-text text-muted">
+                                Camiseta estampada para pets, disponível em vários modelos e tamanhos.
+                                Tecido 100% algodão, confortável e lavável.
+                            </p>
+                            <p class="preco" aria-label="Preço: R$ 45,90">R$ 45,90</p>
+                            <a href="contato.html" class="btn btn-primary-custom w-100"
+                               aria-label="Entrar em contato para comprar a Camiseta Pet">
+                                <i class="bi bi-cart-plus me-1" aria-hidden="true"></i> Tenho Interesse
+                            </a>
+                        </div>
+                    </article>
+                </div>
 
-        <!-- Produto 2 -->
-        <table border="1" cellpadding="10" cellspacing="0">
-            <tr>
-                <th colspan="2">Cama Pet Retangular Confort</th>
-            </tr>
-            <tr>
-                <td>
-                    <img src="imagens/cama-pet.jpg" alt="Cama Pet Retangular" width="250" height="250">
-                </td>
-                <td>
-                    <p><strong>Descrição:</strong></p>
-                    <p>
-                        Cama retangular acolchoada para cães e gatos. Feita com tecido
-                        impermeável e enchimento em fibra de silicone, proporcionando
-                        conforto e durabilidade. Fácil de lavar e ideal para uso em ambientes
-                        internos. Base antiderrapante para maior segurança.
-                    </p>
-                    <ul>
-                        <li><strong>Material:</strong> Tecido impermeável com enchimento em fibra de silicone</li>
-                        <li><strong>Dimensões:</strong> 60cm x 50cm x 15cm</li>
-                        <li><strong>Cores disponíveis:</strong> Cinza, Marrom, Bege</li>
-                        <li><strong>Indicação:</strong> Cães e gatos de pequeno e médio porte</li>
-                    </ul>
-                    <p><strong>Valor: R$ 89,90</strong></p>
-                </td>
-            </tr>
-        </table>
+                <!-- Produto 2: Cama Pet -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="card card-produto" aria-label="Produto: Cama Pet">
+                        <img src="imagens/cama-pet.jpg"
+                             alt="Cama para pets almofadada, com bordas elevadas para maior conforto e segurança do animal"
+                             class="card-img-top"
+                             width="400" height="200"
+                             loading="lazy"
+                             data-fallback="true">
+                        <div class="img-placeholder" aria-hidden="true">🛏️</div>
+                        <div class="card-body">
+                            <span class="badge badge-categoria mb-2">Conforto</span>
+                            <h3 class="card-title h5">Cama Pet</h3>
+                            <p class="card-text text-muted">
+                                Cama almofadada com bordas elevadas para maior conforto e segurança.
+                                Fácil de limpar, com capa removível e lavável.
+                            </p>
+                            <p class="preco" aria-label="Preço: R$ 89,90">R$ 89,90</p>
+                            <a href="contato.html" class="btn btn-primary-custom w-100"
+                               aria-label="Entrar em contato para comprar a Cama Pet">
+                                <i class="bi bi-cart-plus me-1" aria-hidden="true"></i> Tenho Interesse
+                            </a>
+                        </div>
+                    </article>
+                </div>
 
-        <br>
-        <p><a href="index.html">&larr; Voltar para a Página Inicial</a></p>
+                <!-- Produto 3: Brinquedo de Corda -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="card card-produto" aria-label="Produto: Brinquedo de Corda">
+                        <img src="imagens/brinquedo-corda.jpg"
+                             alt="Brinquedo de corda colorida para cães, ideal para brincadeiras e estímulo mental"
+                             class="card-img-top"
+                             width="400" height="200"
+                             loading="lazy"
+                             data-fallback="true">
+                        <div class="img-placeholder" aria-hidden="true">🪢</div>
+                        <div class="card-body">
+                            <span class="badge badge-categoria mb-2">Brinquedos</span>
+                            <h3 class="card-title h5">Brinquedo de Corda</h3>
+                            <p class="card-text text-muted">
+                                Brinquedo de corda trançada resistente, ideal para brincadeiras
+                                e estímulo mental dos cães. Auxilia na limpeza dos dentes.
+                            </p>
+                            <p class="preco" aria-label="Preço: R$ 24,90">R$ 24,90</p>
+                            <a href="contato.html" class="btn btn-primary-custom w-100"
+                               aria-label="Entrar em contato para comprar o Brinquedo de Corda">
+                                <i class="bi bi-cart-plus me-1" aria-hidden="true"></i> Tenho Interesse
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA para outras categorias -->
+        <div class="container mb-5 text-center">
+            <p class="text-muted">Explore outras categorias ou agende um serviço para o seu pet:</p>
+            <a href="racoes.html" class="btn btn-secondary-custom me-2"
+               aria-label="Ver produtos da categoria Rações">
+                <i class="bi bi-bag me-1" aria-hidden="true"></i> Rações
+            </a>
+            <a href="agendamento.html" class="btn btn-primary-custom"
+               aria-label="Agendar serviço de banho ou tosa">
+                <i class="bi bi-calendar-check me-1" aria-hidden="true"></i> Agendar Serviço
+            </a>
+        </div>
+
     </main>
 
-    <br>
-    <hr>
-
     <!-- ==================== RODAPÉ ==================== -->
-    <footer>
-        <h3>PetShop Amigo Fiel</h3>
-        <p>
-            <strong>Endereço:</strong> Rua dos Animais, 123 - Centro - São Paulo/SP - CEP: 01001-000<br>
-            <strong>Telefone:</strong> (11) 1234-5678 | <strong>WhatsApp:</strong> (11) 91234-5678<br>
-            <strong>E-mail:</strong> contato@petshopamigofiel.com.br<br>
-            <strong>Horário de funcionamento:</strong> Segunda a Sábado, das 8h às 19h
-        </p>
-        <hr>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="acessorios.html">Acessórios</a> |
-            <a href="racoes.html">Rações</a> |
-            <a href="higiene.html">Higiene e Limpeza</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
-        <hr>
-        <p>
-            &copy; 2026 PetShop Amigo Fiel - Todos os direitos reservados.<br>
-            Desenvolvido por Filipe Neves - Projeto Acadêmico - Fundamentos de Sistemas Web
-        </p>
+    <footer role="contentinfo">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>&#128062; PetShop Amigo Fiel</h5>
+                    <p class="small" style="color: rgba(255,255,255,0.7);">
+                        Cuidando do seu melhor amigo com carinho e dedicação desde 2014.
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6>Navegação</h6>
+                    <nav aria-label="Links de navegação no rodapé">
+                        <ul class="list-unstyled small">
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="acessorios.html">Acessórios</a></li>
+                            <li><a href="racoes.html">Rações</a></li>
+                            <li><a href="higiene.html">Higiene e Limpeza</a></li>
+                            <li><a href="servicos.html">Serviços</a></li>
+                            <li><a href="cadastro.html">Cadastro</a></li>
+                            <li><a href="agendamento.html">Agendamento</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h6>Contato</h6>
+                    <address class="small" style="font-style: normal;">
+                        <p><i class="bi bi-geo-alt-fill me-1" aria-hidden="true"></i> Rua dos Animais, 123 - São Paulo/SP</p>
+                        <p><i class="bi bi-telephone-fill me-1" aria-hidden="true"></i> (11) 1234-5678</p>
+                        <p><i class="bi bi-whatsapp me-1" aria-hidden="true"></i> (11) 91234-5678</p>
+                        <p><i class="bi bi-clock-fill me-1" aria-hidden="true"></i> Seg–Sáb: 8h às 19h</p>
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center py-3">
+            <small>
+                &copy; 2026 PetShop Amigo Fiel - Todos os direitos reservados. |
+                Desenvolvido por Filipe Neves &mdash; Projeto Acadêmico &mdash; Fundamentos de Sistemas Web
+            </small>
+        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

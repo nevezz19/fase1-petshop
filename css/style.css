@@ -1,0 +1,475 @@
+/* ============================================================
+   PetShop Amigo Fiel - Estilos Personalizados
+   Fase 2 - Fundamentos de Sistemas Web
+   Autor: Filipe Neves
+   ============================================================ */
+
+/* ---------- Variáveis de Cor e Configuração Global ---------- */
+:root {
+    --cor-primaria:   #2d6a4f;   /* Verde escuro - cor principal */
+    --cor-secundaria: #f77f00;   /* Laranja - cor de destaque */
+    --cor-acento:     #52b788;   /* Verde claro - cor de apoio */
+    --cor-fundo:      #f8f9fa;
+    --cor-texto:      #212529;
+    --sombra-card:    0 4px 15px rgba(0, 0, 0, 0.1);
+    --borda-radius:   8px;
+    --transicao:      all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* ---------- Acessibilidade: Link "Pular para o Conteúdo" ---------- */
+/* Fica oculto visualmente mas é lido por leitores de tela */
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background: var(--cor-secundaria);
+    color: #fff;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 10000;
+    border-radius: 0 0 6px 0;
+    transition: top 0.3s;
+}
+
+/* Torna o link visível quando recebe foco (via Tab) */
+.skip-link:focus {
+    top: 0;
+}
+
+/* ---------- Acessibilidade: Foco Visível para todos os elementos interativos ---------- */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+[tabindex]:focus {
+    outline: 3px solid var(--cor-secundaria) !important;
+    outline-offset: 3px !important;
+}
+
+/* ---------- Barra Superior de Informações ---------- */
+.top-bar {
+    background-color: var(--cor-secundaria);
+    color: #fff;
+    font-size: 0.82rem;
+    padding: 6px 0;
+}
+
+.top-bar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.top-bar a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Navbar Principal ---------- */
+.navbar-custom {
+    background-color: var(--cor-primaria) !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-brand {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #fff !important;
+}
+
+/* Destaque na palavra "Amigo Fiel" em laranja */
+.navbar-brand span {
+    color: var(--cor-secundaria);
+}
+
+.navbar-custom .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500;
+    padding: 0.45rem 0.85rem;
+    border-radius: 4px;
+    transition: var(--transicao);
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active,
+.navbar-custom .nav-link[aria-current="page"] {
+    color: #fff !important;
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Ícone do menu hamburguer em branco para fundo escuro */
+.navbar-custom .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-custom .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Dropdown alinhado com o tema */
+.navbar-custom .dropdown-menu {
+    border: none;
+    box-shadow: var(--sombra-card);
+    border-radius: var(--borda-radius);
+}
+
+.navbar-custom .dropdown-item:hover {
+    background-color: rgba(45, 106, 79, 0.1);
+    color: var(--cor-primaria);
+}
+
+/* ---------- Widget de Data e Hora em Tempo Real ---------- */
+#relogio-widget {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 0.8rem;
+    color: #fff;
+    white-space: nowrap;
+}
+
+/* ---------- Indicador de Status de Funcionamento ---------- */
+.aberto {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.fechado {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* ---------- Carrossel de Imagens ---------- */
+/* Define altura fixa para os slides */
+.carousel-inner,
+.carousel-item {
+    height: 460px;
+}
+
+/* Container de fundo de cada slide com gradiente */
+.slide-bg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cores temáticas para os 3 slides */
+.slide-1 { background: linear-gradient(135deg, #2d6a4f 0%, #52b788 100%); }
+.slide-2 { background: linear-gradient(135deg, #b5451b 0%, #f77f00 100%); }
+.slide-3 { background: linear-gradient(135deg, #1a4d6e 0%, #2196a5 100%); }
+
+/* Texto e botão dentro do carrossel */
+.carousel-caption-custom {
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+    max-width: 700px;
+}
+
+.carousel-caption-custom h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0.8rem;
+}
+
+.carousel-caption-custom p {
+    font-size: 1.15rem;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1.5rem;
+}
+
+.carousel-caption-custom .btn {
+    font-weight: 600;
+    padding: 0.6rem 2.2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+}
+
+/* ---------- Títulos de Seção ---------- */
+.section-title {
+    color: var(--cor-primaria);
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Linha decorativa abaixo do título */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--cor-secundaria);
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+.section-title.text-center::after {
+    margin: 8px auto 0;
+}
+
+/* ---------- Cards de Produtos e Categorias ---------- */
+.card-produto {
+    border: none;
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-card);
+    transition: var(--transicao);
+    height: 100%;
+}
+
+/* Efeito de elevação ao passar o mouse */
+.card-produto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-produto .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--borda-radius) var(--borda-radius) 0 0;
+}
+
+.card-produto .card-title {
+    color: var(--cor-primaria);
+    font-weight: 700;
+}
+
+/* Preço em destaque laranja */
+.preco {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor-secundaria);
+}
+
+/* Badge de categoria no card */
+.badge-categoria {
+    background-color: var(--cor-acento) !important;
+    font-size: 0.75rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+/* Placeholder exibido quando imagem do produto não carrega */
+.img-placeholder {
+    height: 200px;
+    background: linear-gradient(135deg, rgba(45, 106, 79, 0.08), rgba(82, 183, 136, 0.15));
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 4.5rem;
+    border-radius: var(--borda-radius) var(--borda-radius) 0 0;
+}
+
+/* ---------- Tabelas de Serviços ---------- */
+.tabela-servicos {
+    border-radius: var(--borda-radius);
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+}
+
+.tabela-servicos thead th {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 14px 16px;
+}
+
+.tabela-servicos tbody tr:hover {
+    background-color: rgba(82, 183, 136, 0.08);
+}
+
+.tabela-servicos td {
+    padding: 12px 16px;
+    vertical-align: middle;
+}
+
+/* ---------- Formulários ---------- */
+.form-label {
+    font-weight: 600;
+    color: var(--cor-primaria);
+    margin-bottom: 0.3rem;
+}
+
+/* Borda e sombra de foco nos campos */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--cor-acento);
+    box-shadow: 0 0 0 0.2rem rgba(82, 183, 136, 0.25);
+}
+
+/* Título de seção dentro do formulário */
+.form-section-title {
+    color: var(--cor-primaria);
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-left: 4px solid var(--cor-secundaria);
+    padding-left: 12px;
+    margin: 2rem 0 1rem;
+}
+
+/* Container branco com sombra para o formulário */
+.form-card {
+    background: #fff;
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-card);
+    padding: 2rem;
+}
+
+/* ---------- Botões Personalizados ---------- */
+.btn-primary-custom {
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+    color: #fff;
+    border-radius: 25px;
+    padding: 0.55rem 2rem;
+    font-weight: 600;
+    transition: var(--transicao);
+}
+
+.btn-primary-custom:hover,
+.btn-primary-custom:focus {
+    background-color: #1e4d38;
+    border-color: #1e4d38;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(45, 106, 79, 0.35);
+}
+
+.btn-secondary-custom {
+    background-color: var(--cor-secundaria);
+    border-color: var(--cor-secundaria);
+    color: #fff;
+    border-radius: 25px;
+    padding: 0.55rem 2rem;
+    font-weight: 600;
+    transition: var(--transicao);
+}
+
+.btn-secondary-custom:hover,
+.btn-secondary-custom:focus {
+    background-color: #d46800;
+    border-color: #d46800;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(247, 127, 0, 0.35);
+}
+
+/* ---------- Hero de Páginas Internas ---------- */
+.page-hero {
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-acento) 100%);
+    color: #fff;
+    padding: 3.5rem 0;
+    margin-bottom: 2.5rem;
+}
+
+.page-hero h1 {
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.page-hero p {
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+/* ---------- Ícones Circulares de Diferenciais ---------- */
+.feature-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 1rem;
+}
+
+/* ---------- Rodapé ---------- */
+footer {
+    background-color: var(--cor-primaria);
+    color: rgba(255, 255, 255, 0.85);
+}
+
+footer h5,
+footer h6 {
+    color: #fff;
+    font-weight: 700;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: var(--transicao);
+}
+
+footer a:hover {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+}
+
+footer address p {
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 991px) {
+    .top-bar .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 4px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-inner,
+    .carousel-item {
+        height: 320px;
+    }
+
+    .carousel-caption-custom h2 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption-custom p {
+        font-size: 0.9rem;
+        display: none; /* Oculta descrição em telas pequenas para não sobrecarregar */
+    }
+
+    .page-hero {
+        padding: 2rem 0;
+    }
+
+    .page-hero h1 {
+        font-size: 1.5rem;
+    }
+}
